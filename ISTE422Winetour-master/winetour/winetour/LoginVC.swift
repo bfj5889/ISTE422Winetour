@@ -74,6 +74,19 @@ class LoginVC: UIViewController {
                     print(msg)
                     print(hadError ?? true)
                     
+                    DispatchQueue.main.async(execute: {
+                        if parseJSON["error"] as! Bool? == true { //failed to login
+                            //creating the failed login alert
+                            let failedLoginAlert = UIAlertController(title: "Failed To Log In", message: "Email or Password Incorrect. Press 'OK' to try again.", preferredStyle: UIAlertControllerStyle.alert)
+                            //adding ok button to failedLoginALert action
+                            failedLoginAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(failedLoginAlert, animated: true, completion: nil)
+                        } else if hadError == false { //success full login
+                            
+                        } else { //error from db during log in
+                            
+                        }
+                    })
                 }
             } catch {
                 print(error)
@@ -87,20 +100,20 @@ class LoginVC: UIViewController {
         task.resume()
         
         
-        /** PROCESS MUST BE DONE AFTER TASK IS RESUMED? **/
-        print("hadError = ")
-        print(hadError!)
-        if hadError == true { //failed to login
-            //creating the failed login alert
-            let failedLoginAlert = UIAlertController(title: "Failed To Log In", message: "Email or Password Incorrect. Press 'OK' to try again.", preferredStyle: UIAlertControllerStyle.alert)
-            //adding ok button to failedLoginALert action
-            failedLoginAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(failedLoginAlert, animated: true, completion: nil)
-        } else if hadError == false { //success full login
-            
-        } else { //error from db during log in
-            
-        }
+//        /** PROCESS MUST BE DONE AFTER TASK IS RESUMED? **/
+//        print("hadError = ")
+//        print(hadError!)
+//        if hadError == true { //failed to login
+//            //creating the failed login alert
+//            let failedLoginAlert = UIAlertController(title: "Failed To Log In", message: "Email or Password Incorrect. Press 'OK' to try again.", preferredStyle: UIAlertControllerStyle.alert)
+//            //adding ok button to failedLoginALert action
+//            failedLoginAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(failedLoginAlert, animated: true, completion: nil)
+//        } else if hadError == false { //success full login
+//            
+//        } else { //error from db during log in
+//            
+//        }
         
     }
 
