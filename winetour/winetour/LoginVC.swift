@@ -10,6 +10,9 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    /** Constant Variables **/
+    let LOGIN_URL = "http://kelvin.ist.rit.edu/~winetour/winetour/api/login.php"
+    
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var pwdTxtFld: UITextField!
     
@@ -21,9 +24,86 @@ class LoginVC: UIViewController {
         Creates OK action alert to notify user of invalid credentials
     ***/
     @IBAction func loginBtn(_ sender: UIButton) {
+        //getting values from text fields
+        let email = emailTxtFld.text
+        let pwd = pwdTxtFld.text
+        
+        //created NSURL
+        let requestURL = NSURL(string: LOGIN_URL)
+        
+        //creating NSMutableURLRequest
+        let request = NSMutableURLRequest(url: requestURL! as URL)
+        
+        //setting the method to post
+        request.httpMethod = "POST"
+        
 
+        //creating the post parameter by concatenating the keys and values from text field
+        let postParameters = "email="+email!+"&password="+pwd!;
+        
+        //adding the parameters to request body
+        request.httpBody = postParameters.data(using: String.Encoding.utf8)
+        //creating varaible that will be used to check if log in was successful from json
+        var hadError : Bool?
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            data, response, error in
+            
+            if error != nil{
+                print("error is \(error)")
+                return;
+            }
+            
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                //parsing the json
+                if let parseJSON = myJSON {
+                    
+                    //creating a string
+                    var msg : String!
+                    
+                    //getting the json response by parts
+                    msg = parseJSON["message"] as! String?
+                    hadError = parseJSON["error"] as! Bool?
+                    
+                    //printing the response
+                    print(msg)
+                    print(hadError ?? true)
+                    
+                }
+            } catch {
+                print(error)
+            }
+            //error connecting to db
+            hadError = false
+            
+        } //end of let task
+        
+        //executing the task
+        task.resume()
+        
+        /** PROCESS MUST BE DONE AFTER TASK IS RESUMED? **/
+        print("hadError = ")
+        print(hadError!)
+        if hadError == true { //failed to login
+            //creating the failed login alert
+            let failedLoginAlert = UIAlertController(title: "Failed To Log In", message: "Email or Password Incorrect. Press 'OK' to try again.", preferredStyle: UIAlertControllerStyle.alert)
+            //adding ok button to failedLoginALert action
+            failedLoginAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(failedLoginAlert, animated: true, completion: nil)
+        } else if hadError == false { //success full login
+            
+        } else { //error from db during log in
+            
+        }
+        
     }
 
+    
     /***
      Starts using account creation process when user presses button
      ***/
@@ -41,16 +121,4 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
-    
-}
+} // end of LoginVC class
