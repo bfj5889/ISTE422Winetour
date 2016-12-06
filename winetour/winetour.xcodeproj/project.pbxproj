@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95DF911DF634270051B8BE /* AppDelegate.swift */; };
-		3F95DF941DF634270051B8BE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95DF931DF634270051B8BE /* FirstViewController.swift */; };
-		3F95DF961DF634270051B8BE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95DF951DF634270051B8BE /* SecondViewController.swift */; };
 		3F95DF991DF634270051B8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF971DF634270051B8BE /* Main.storyboard */; };
 		3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF9A1DF634270051B8BE /* Assets.xcassets */; };
 		3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF9C1DF634270051B8BE /* LaunchScreen.storyboard */; };
+		3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5BDE31DF65674002AEFCA /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F95DF8E1DF634270051B8BE /* winetour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winetour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95DF911DF634270051B8BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F95DF931DF634270051B8BE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3F95DF951DF634270051B8BE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3F95DF981DF634270051B8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F95DF9A1DF634270051B8BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F95DF9D1DF634270051B8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F95DF9F1DF634270051B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC5BDE31DF65674002AEFCA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,30 @@
 		3F95DF901DF634270051B8BE /* winetour */ = {
 			isa = PBXGroup;
 			children = (
+				3FC5BDE01DF647B4002AEFCA /* Models */,
+				3FC5BDDF1DF647A6002AEFCA /* View Controllers */,
 				3F95DF911DF634270051B8BE /* AppDelegate.swift */,
-				3F95DF931DF634270051B8BE /* FirstViewController.swift */,
-				3F95DF951DF634270051B8BE /* SecondViewController.swift */,
 				3F95DF971DF634270051B8BE /* Main.storyboard */,
 				3F95DF9A1DF634270051B8BE /* Assets.xcassets */,
 				3F95DF9C1DF634270051B8BE /* LaunchScreen.storyboard */,
 				3F95DF9F1DF634270051B8BE /* Info.plist */,
 			);
 			path = winetour;
+			sourceTree = "<group>";
+		};
+		3FC5BDDF1DF647A6002AEFCA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5BDE31DF65674002AEFCA /* LoginVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3FC5BDE01DF647B4002AEFCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F95DF961DF634270051B8BE /* SecondViewController.swift in Sources */,
+				3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */,
 				3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */,
-				3F95DF941DF634270051B8BE /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +279,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ISTE422Final.winetour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -279,6 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ISTE422Final.winetour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -301,6 +315,7 @@
 				3F95DFA41DF634270051B8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
