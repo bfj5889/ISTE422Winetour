@@ -81,7 +81,7 @@ class LoginVC: UIViewController {
                             //adding ok button to failedLoginALert action
                             failedLoginAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                             self.present(failedLoginAlert, animated: true, completion: nil)
-                        } else if hadError == false { //success full login
+                        } else if parseJSON["error"] as! Bool? == false { //success full login
                             
                         } else { //error from db during log in
                             
@@ -106,6 +106,12 @@ class LoginVC: UIViewController {
      Starts using account creation process when user presses button
      ***/
     @IBAction func createAccoutnBtn(_ sender: UIButton) {
+        //grab the story board
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        //create instance of the createAccount view
+        let createAccountController = storyBoard.instantiateViewController(withIdentifier: "createAccount") as! CreateAccountVC
+        self.present(createAccountController, animated:true, completion:nil)
     }
 
     override func viewDidLoad() {
