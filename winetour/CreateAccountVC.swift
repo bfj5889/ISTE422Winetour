@@ -48,6 +48,7 @@ class CreateAccountVC: UIViewController {
             let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
             print("dict in create account")
             print(dataDict)
+            print(dataDict["error"])
             let hadError = dataDict["error"] as! Bool?
             print("Does the email exist? ")
             print(hadError)

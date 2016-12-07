@@ -14,9 +14,11 @@ import UIKit
  ****/
 var myJSON: NSDictionary?
 class DataModel {
-    
+    var emptyDictionary:NSDictionary = [:]
     
     func sendData(urlString: String , postParamterString: String) -> NSDictionary {
+        emptyDictionary = ["error": "nil"]
+        
         print("parameter string " + postParamterString)
         print("url string " + urlString)
         
@@ -32,6 +34,7 @@ class DataModel {
         request.httpBody = postParamterString.data(using: String.Encoding.utf8)
         
         //creating a task to send the post request
+        DispatchQueue.main.async(execute: {
         let task = URLSession.shared.dataTask(with: request as URLRequest){
             data, response, error in
             
@@ -56,6 +59,7 @@ class DataModel {
                     DispatchQueue.main.async(execute: {
                        myJSON = parseJSON
                         print("setting myJSON to the compiled json")
+                        print(myJSON)
                     })
                     
                 }
@@ -67,18 +71,17 @@ class DataModel {
         
         //executing the task
         task.resume()
-        
+        })
         print("the json")
         print(myJSON)
         if (myJSON === nil){
-            let emptyDictionary = [String: String]()
-            return emptyDictionary as NSDictionary
+            return emptyDictionary
         }else{
             return myJSON!
         }
 //        DispatchQueue.main.async(execute: {
 //            return myJSON!
 //        })
-        
+    
     }//end of sendData method
 } //end of SendData Class
