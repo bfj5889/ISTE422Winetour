@@ -53,7 +53,7 @@ class CreateAccountVC: UIViewController {
             }
             
         } else {
-            throwOkError(title:"Can't Create Account" , message: "Email/Password Invalid")
+            throwOkError(title:"Can't Create Account" , message: "Email/Password Invalid Info")
         }
         
         
