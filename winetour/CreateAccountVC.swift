@@ -10,7 +10,7 @@ import UIKit
 
 class CreateAccountVC: UIViewController {
     
-
+    
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var pwdTextFld: UITextField!
     @IBOutlet weak var userTypeControl: UISegmentedControl!
@@ -28,7 +28,7 @@ class CreateAccountVC: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dob = dateFormatter.string(from: dobPicker.date)
         print(dob)
-
+        
         var userType: String
         switch userTypeControl.selectedSegmentIndex {
         case 0:
@@ -40,12 +40,31 @@ class CreateAccountVC: UIViewController {
         }
         
         let postParameterString = "email=" + email + "&password=" + pwd + "&userType=" + userType +  "&dob=" + dob
+        print(email)
+        print(pwd)
         
-        let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
-        print("dict in create account")
-        print(dataDict)
+        if (email != "" || pwd != "") {
+            let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
+            print("dict in create account")
+            print(dataDict)
+            let hadError = dataDict["error"] as! Bool?
+            if (hadError == true){
+                self.throwOkError(title:"Can't Create Account" , message:"")
+            }
+            
+        } else {
+            throwOkError(title:"Can't Create Account" , message: "Email/Password Invalid")
+        }
+        
         
         //Need to check for error and make a pop up if it failed
+    }
+    
+    func throwOkError(title:String , message: String){
+        let failedLoginAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        //adding ok button to failedLoginALert action
+        failedLoginAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(failedLoginAlert, animated: true, completion: nil)
     }
     
     /**
@@ -63,24 +82,24 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
