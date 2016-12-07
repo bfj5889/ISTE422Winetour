@@ -49,7 +49,7 @@ class CreateAccountVC: UIViewController {
             print(dataDict)
             let hadError = dataDict["error"] as! Bool?
             if (hadError == true){
-                self.throwOkError(title:"Can't Create Account" , message:"")
+                self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
             }
             
         } else {
