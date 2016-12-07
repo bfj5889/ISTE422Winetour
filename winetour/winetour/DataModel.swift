@@ -46,7 +46,7 @@ class DataModel {
                 if let parseJSON = self.myJSON {
                     var msg : String!
                     msg = parseJSON["message"] as! String?
-                    var error = parseJSON["error"] as! Bool?
+                    let error = parseJSON["error"] as! Bool?
                     print("printing message and error status")
                     print(msg)
                     print(error)
