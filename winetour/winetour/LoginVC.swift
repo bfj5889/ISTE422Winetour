@@ -11,7 +11,7 @@ import UIKit
 class LoginVC: UIViewController {
     
     /** Constant Variables **/
-    let LOGIN_URL = "http://kelvin.ist.rit.edu/~winetour/winetour/api/login.php"
+    let LOGIN_URL = "http://kelvin.ist.rit.edu/~winetour/winetour2/api/account/login.php"
     
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var pwdTxtFld: UITextField!

@@ -18,7 +18,7 @@ class CreateAccountVC: UIViewController {
     
     @IBAction func createAccount(_ sender: AnyObject) {
         
-        let urlString = "http://kelvin.ist.rit.edu/~winetour/winetour/api/createAccount.php"
+        let urlString = "http://kelvin.ist.rit.edu/~winetour/winetour2/api/account/createAccount.php"
         
         let email = emailTxtFld.text!
         let pwd = pwdTextFld.text!
@@ -41,7 +41,7 @@ class CreateAccountVC: UIViewController {
         
         let postParameterString = "email=" + email + "&password=" + pwd + "&userType=" + userType +  "&dob=" + dob
         
-        let dataDict: NSDictionary = SendData().sendData(urlString: urlString, postParamterString: postParameterString)
+        let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
         print("dict in create account")
         print(dataDict)
         

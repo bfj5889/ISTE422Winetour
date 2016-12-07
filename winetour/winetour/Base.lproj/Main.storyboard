@@ -68,6 +68,52 @@
             </objects>
             <point key="canvasLocation" x="611" y="-27"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="aEu-zN-uDJ">
+            <objects>
+                <tableViewController id="lpV-XX-gVa" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="axt-Ne-hYU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vHb-Cn-v2C">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vHb-Cn-v2C" id="jrb-kw-Ly3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lpV-XX-gVa" id="CFV-20-Ghf"/>
+                            <outlet property="delegate" destination="lpV-XX-gVa" id="tqM-ex-3G8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="AaS-OS-Y3d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9s-1E-c47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="774"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="DQ5-8W-hwX">
+            <objects>
+                <navigationController id="hSG-mi-uqY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ubb-cZ-Ibt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yPY-ve-ako">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lpV-XX-gVa" kind="relationship" relationship="rootViewController" id="WmE-NU-LDb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v93-VH-qs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="775"/>
+        </scene>
         <!--LoginContainer-->
         <scene sceneID="su1-Ou-rpQ">
             <objects>
@@ -113,7 +159,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="DQt-VU-MiZ" kind="relationship" relationship="viewControllers" id="Api-Vl-903"/>
+                        <segue destination="hSG-mi-uqY" kind="relationship" relationship="viewControllers" id="OjV-Cb-scT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -311,49 +357,8 @@
             </objects>
             <point key="canvasLocation" x="-1794.375" y="799.64788732394368"/>
         </scene>
-        <!--Winery List-->
-        <scene sceneID="DOF-5V-Exw">
-            <objects>
-                <viewController id="DQt-VU-MiZ" customClass="SecondViewController" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MFk-57-wdZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="BpX-Qi-q1W"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9XS-BV-Q7V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sYG-XS-r1V">
-                                <rect key="frame" x="55.5" y="263.5" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-Nc-pcJ">
-                                <rect key="frame" x="52.5" y="313" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="sYG-XS-r1V" secondAttribute="centerX" id="23C-SY-Wto"/>
-                            <constraint firstItem="pPT-Nc-pcJ" firstAttribute="centerX" secondItem="sYG-XS-r1V" secondAttribute="centerX" id="2fh-Fp-liP"/>
-                            <constraint firstItem="pPT-Nc-pcJ" firstAttribute="top" secondItem="sYG-XS-r1V" secondAttribute="bottom" constant="8" symbolic="YES" id="MIb-ha-Vf0"/>
-                            <constraint firstAttribute="centerY" secondItem="sYG-XS-r1V" secondAttribute="centerY" id="Pnl-cx-x2v"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Winery List" image="barrel.png" selectedImage="barrel.png" id="7HJ-Os-ih0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="td1-Rr-O8U" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="609" y="764"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="barrel.png" width="19" height="18"/>
         <image name="profile.png" width="19" height="18"/>
         <image name="wine.png" width="19" height="18"/>
     </resources>
