@@ -44,10 +44,13 @@ class CreateAccountVC: UIViewController {
         print(pwd)
         
         if (email != "" || pwd != "") {
+/** THIS IS ONLY SET ON THE SECOND TIME AROUND**/
             let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
             print("dict in create account")
             print(dataDict)
             let hadError = dataDict["error"] as! Bool?
+            print("Does the email exist? ")
+            print(hadError)
             if (hadError == true){
                 self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
             }

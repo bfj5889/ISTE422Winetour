@@ -12,8 +12,9 @@ import UIKit
  
  
  ****/
+var myJSON: NSDictionary?
 class DataModel {
-    var myJSON: NSDictionary?
+    
     
     func sendData(urlString: String , postParamterString: String) -> NSDictionary {
         print("parameter string " + postParamterString)
@@ -42,40 +43,22 @@ class DataModel {
             //parsing the response
             do {
                 //converting resonse to NSDictionary
-                self.myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                if let parseJSON = self.myJSON {
+                myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                print("printing json 1")
+                print(myJSON)
+                if let parseJSON = myJSON {
                     var msg : String!
                     msg = parseJSON["message"] as! String?
                     let error = parseJSON["error"] as! Bool?
-                    print("printing message and error status")
+                    print("printing message and error status in datamodel.swift")
                     print(msg)
                     print(error)
+                    DispatchQueue.main.async(execute: {
+                       myJSON = parseJSON
+                        print("setting myJSON to the compiled json")
+                    })
+                    
                 }
-                
-                //            //parsing the json
-                //            if let parseJSON = myJSON {
-                //
-                //                //creating a string
-                //                var msg : String!
-                //
-                //                //getting the json response by parts
-                //                msg = parseJSON["message"] as! String?
-                //
-                //                //printing the response
-                //                print(msg)
-                //
-                //                DispatchQueue.main.async(execute: {
-                //                    if parseJSON["error"] as! Bool? == true {
-                //                        let failedAlert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: UIAlertControllerStyle.alert)
-                //                        failedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                //                        self.present(failedAlert, animated: true, completion: nil)
-                //                    } else if parseJSON["error"] as! Bool? == false {
-                //                        
-                //                    } else { //error from db during log in
-                //                        
-                //                    }
-                //                })
-                //            }
             } catch {
                 print(error)
             }
@@ -84,13 +67,14 @@ class DataModel {
         
         //executing the task
         task.resume()
+        
         print("the json")
-        //print(self.myJSON)
-        if (self.myJSON == nil){
+        print(myJSON)
+        if (myJSON === nil){
             let emptyDictionary = [String: String]()
             return emptyDictionary as NSDictionary
         }else{
-            return self.myJSON!
+            return myJSON!
         }
 //        DispatchQueue.main.async(execute: {
 //            return myJSON!
