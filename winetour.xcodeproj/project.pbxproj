@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED51DF8A646007A77E4 /* Wine.swift */; };
 		28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED61DF8A646007A77E4 /* Wines.swift */; };
+		28FDBEDC1DF8AF1B007A77E4 /* WineTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBEDB1DF8AF1B007A77E4 /* WineTableVC.swift */; };
+		28FDBEE01DF8B17D007A77E4 /* WineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBEDF1DF8B17D007A77E4 /* WineTableViewCell.swift */; };
 		3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C45E1DF77EB900A291A4 /* 53-house.png */; };
 		3F25C4641DF7846600A291A4 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C4621DF7846600A291A4 /* profile.png */; };
 		3F25C4651DF7846600A291A4 /* wine.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C4631DF7846600A291A4 /* wine.png */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		28FDBED51DF8A646007A77E4 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		28FDBED61DF8A646007A77E4 /* Wines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wines.swift; sourceTree = "<group>"; };
+		28FDBEDB1DF8AF1B007A77E4 /* WineTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineTableVC.swift; sourceTree = "<group>"; };
+		28FDBEDF1DF8B17D007A77E4 /* WineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineTableViewCell.swift; sourceTree = "<group>"; };
 		3F25C45E1DF77EB900A291A4 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
 		3F25C4621DF7846600A291A4 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		3F25C4631DF7846600A291A4 /* wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine.png; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			children = (
 				3FC5BDE31DF65674002AEFCA /* LoginVC.swift */,
 				E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */,
+				28FDBEDB1DF8AF1B007A77E4 /* WineTableVC.swift */,
+				28FDBEDF1DF8B17D007A77E4 /* WineTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -196,9 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FDBEE01DF8B17D007A77E4 /* WineTableViewCell.swift in Sources */,
 				3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */,
 				28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */,
 				3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */,
+				28FDBEDC1DF8AF1B007A77E4 /* WineTableVC.swift in Sources */,
 				E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */,
 				28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */,
 				3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */,
