@@ -188,7 +188,7 @@
         <!--Sign Up-->
         <scene sceneID="E1C-2H-tRc">
             <objects>
-                <viewController id="ntG-sK-Sye" userLabel="Sign Up" sceneMemberID="viewController">
+                <viewController id="ntG-sK-Sye" userLabel="Sign Up" customClass="CreateAccountVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PVx-oW-K84"/>
                         <viewControllerLayoutGuide type="bottom" id="JVt-O4-nLV"/>
