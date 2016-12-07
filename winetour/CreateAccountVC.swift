@@ -41,7 +41,7 @@ class CreateAccountVC: UIViewController {
         
         let postParameterString = "email=" + email + "&password=" + pwd + "&userType=" + userType +  "&dob=" + dob
         
-        let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString, httpMethod: "POST")
+        let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
         print("dict in create account")
         print(dataDict)
         
