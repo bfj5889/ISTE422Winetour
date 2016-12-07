@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mLz-xR-8d7">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mLz-xR-8d7">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Profile-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Login" id="9pv-A4-QxB" userLabel="First" customClass="FirstViewController" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="9pv-A4-QxB" userLabel="Profile" customClass="FirstViewController" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -20,15 +17,15 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="profile.png" selectedImage="profile.png" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="613" y="-768"/>
         </scene>
-        <!--Second-->
+        <!--Wine List-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,20 +38,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="55.5" y="263.5" width="209.5" height="41.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="52.5" y="313" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
@@ -62,11 +57,11 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Wine List" image="wine.png" selectedImage="wine.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="611" y="-27"/>
         </scene>
         <!--LoginContainer-->
         <scene sceneID="su1-Ou-rpQ">
@@ -81,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8s-HK-6qj" userLabel="LoginVC">
-                                <rect key="frame" x="40" y="117" width="240" height="333"/>
+                                <frame key="frameInset" minX="41" height="332" maxX="39" maxY="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="srr-0J-2L1" kind="embed" id="fzx-8e-bJR"/>
@@ -91,7 +86,8 @@
                         <color key="backgroundColor" red="0.84731539048865612" green="0.84731539048865612" blue="0.84731539048865612" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <segue destination="MsW-qW-sUs" kind="show" id="ktv-Y7-sIB"/>
+                        <segue destination="ntG-sK-Sye" kind="show" id="EKg-gY-51T"/>
+                        <segue destination="49e-Tb-3d3" kind="show" id="hv7-WA-zup"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbW-Tu-HBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,34 +99,36 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="DQt-VU-MiZ" kind="relationship" relationship="viewControllers" id="Api-Vl-903"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-174" y="-27"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="UBl-KS-f42">
             <objects>
-                <viewController id="srr-0J-2L1" customClass="LoginVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="login" storyboardIdentifier="login" id="srr-0J-2L1" customClass="LoginVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eCI-Wq-sWd"/>
                         <viewControllerLayoutGuide type="bottom" id="uOm-j3-kgX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WCy-z7-wGi">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="333"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="332"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winetour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJu-5T-IY5">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="58"/>
+                                <frame key="frameInset" width="240" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49411764705882355" green="0.082352941176470587" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
@@ -138,21 +136,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="li3-Sw-pEd" userLabel="EmailTxtFld">
-                                <rect key="frame" x="27" y="85" width="197" height="30"/>
+                                <frame key="frameInset" minX="27" minY="85" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFn-at-gdP" userLabel="PwdTxtFld">
-                                <rect key="frame" x="27" y="123" width="197" height="30"/>
+                                <frame key="frameInset" minX="27" minY="123" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmn-mh-A1H" userLabel="CreateAccountBtn">
-                                <rect key="frame" x="66" y="249" width="119" height="30"/>
+                                <frame key="frameInset" minX="66" minY="249" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.65024493767591607" green="0.31388474194850013" blue="0.33194235481086126" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
@@ -164,7 +162,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm8-el-dD1" userLabel="LoginBtn">
-                                <rect key="frame" x="27" y="161" width="197" height="30"/>
+                                <frame key="frameInset" minX="27" minY="161" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
@@ -185,108 +183,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBh-8c-ltu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="1"/>
+            <point key="canvasLocation" x="-1046" y="297"/>
         </scene>
-        <!--Sign Up-->
-        <scene sceneID="Src-xE-NoP">
-            <objects>
-                <viewController id="MsW-qW-sUs" userLabel="Sign Up" customClass="CreateAccountVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zrf-KD-jf4"/>
-                        <viewControllerLayoutGuide type="bottom" id="T0A-8o-g2k"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MoO-df-vWz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dFJ-ZU-DiI" userLabel="EmailTxtFld">
-                                <rect key="frame" x="62" y="160" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="puK-mF-GrI" userLabel="PwdTxtFld">
-                                <rect key="frame" x="62" y="198" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winetour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5P-Xb-9dw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create an account with Winetour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNp-jE-3jo">
-                                <rect key="frame" x="16" y="66" width="288" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvq-h3-uCv" userLabel="LoginBtn">
-                                <rect key="frame" x="62" y="518" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <state key="normal" title="Create Account">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginBtn:" destination="srr-0J-2L1" eventType="touchUpInside" id="qAD-IS-c1w"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="i6h-bV-E18">
-                                <rect key="frame" x="39" y="265" width="243" height="64"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="502697077.52079201">
-                                    <!--2016-12-06 06:04:37 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="-157899600">
-                                    <!--1995-12-31 11:00:00 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORt-lG-c3Z">
-                                <rect key="frame" x="100" y="255" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpR-NX-dMv">
-                                <rect key="frame" x="100" y="362" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jl-dV-kxb">
-                                <rect key="frame" x="39" y="382" width="243" height="115"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="MoO-df-vWz" id="5cq-Fw-RdO"/>
-                                </connections>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="userTypePickerView" destination="4jl-dV-kxb" id="lEF-bl-oSm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sDL-L8-u6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-868.125" y="750"/>
-        </scene>
-        <!--Sign Up2-->
+        <!--Create Account-->
         <scene sceneID="E1C-2H-tRc">
             <objects>
-                <viewController id="ntG-sK-Sye" userLabel="Sign Up2" sceneMemberID="viewController">
+                <viewController restorationIdentifier="createAccount" storyboardIdentifier="createAccount" title="createAccount" id="ntG-sK-Sye" userLabel="Create Account" customClass="CreateAccountVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PVx-oW-K84"/>
                         <viewControllerLayoutGuide type="bottom" id="JVt-O4-nLV"/>
@@ -296,21 +198,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0H-v5-Qfc" userLabel="EmailTxtFld">
-                                <rect key="frame" x="62" y="160" width="197" height="30"/>
+                                <frame key="frameInset" minX="62" minY="160" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axP-ah-3EU" userLabel="PwdTxtFld">
-                                <rect key="frame" x="62" y="198" width="197" height="30"/>
+                                <frame key="frameInset" minX="62" minY="198" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winetour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcw-zs-8xO">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                                <frame key="frameInset" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
@@ -318,14 +220,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create an account with Winetour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvm-oT-V6G">
-                                <rect key="frame" x="16" y="66" width="288" height="51"/>
+                                <frame key="frameInset" minX="16" minY="66" width="288" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mg-r0-KUW" userLabel="LoginBtn">
-                                <rect key="frame" x="62" y="518" width="197" height="30"/>
+                                <frame key="frameInset" minX="62" minY="469" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
@@ -333,11 +235,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="createAccount:" destination="ntG-sK-Sye" eventType="touchUpInside" id="z7y-G5-YGT"/>
                                     <action selector="loginBtn:" destination="srr-0J-2L1" eventType="touchUpInside" id="idF-St-5Xt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxC-ig-g3j" userLabel="LoginBtn">
+                                <frame key="frameInset" minX="181" minY="518" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="srr-0J-2L1" eventType="touchUpInside" id="K5G-Yu-bhD"/>
+                                    <action selector="signInBtn:" destination="ntG-sK-Sye" eventType="touchUpInside" id="nw2-0E-wMo"/>
+                                </connections>
+                            </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DL2-4u-qB8">
-                                <rect key="frame" x="39" y="265" width="243" height="64"/>
+                                <frame key="frameInset" minX="38" minY="265" height="64" maxX="38"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="502697077.52079201">
                                     <!--2016-12-06 06:04:37 +0000-->
@@ -347,21 +263,21 @@
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JED-y4-duy">
-                                <rect key="frame" x="100" y="255" width="120" height="21"/>
+                                <frame key="frameInset" minX="100" minY="255" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyA-fq-FWc">
-                                <rect key="frame" x="100" y="362" width="120" height="21"/>
+                                <frame key="frameInset" minX="100" minY="362" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k1c-FY-yK9">
-                                <rect key="frame" x="39" y="391" width="243" height="29"/>
+                                <frame key="frameInset" minX="39" minY="391" width="243" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Public"/>
@@ -369,17 +285,71 @@
                                 </segments>
                                 <color key="tintColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1y-1X-TTc">
+                                <frame key="frameInset" minX="16" minY="521" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="createAccount" destination="2Mg-r0-KUW" id="ogV-gE-DIV"/>
+                        <outlet property="dobPicker" destination="DL2-4u-qB8" id="qsQ-Rs-Euc"/>
+                        <outlet property="emailLbl" destination="t0H-v5-Qfc" id="95N-7N-ThG"/>
+                        <outlet property="emailTxtFld" destination="t0H-v5-Qfc" id="oJQ-2k-IHY"/>
+                        <outlet property="pwdTextFld" destination="axP-ah-3EU" id="Jn3-zK-b6G"/>
+                        <outlet property="userTypeControl" destination="k1c-FY-yK9" id="k5y-Vk-ZuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0X-Oz-Whn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91.875" y="750"/>
+            <point key="canvasLocation" x="-1794.375" y="799.64788732394368"/>
+        </scene>
+        <!--Winery List-->
+        <scene sceneID="DOF-5V-Exw">
+            <objects>
+                <viewController id="DQt-VU-MiZ" customClass="SecondViewController" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MFk-57-wdZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="BpX-Qi-q1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9XS-BV-Q7V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sYG-XS-r1V">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-Nc-pcJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="sYG-XS-r1V" secondAttribute="centerX" id="23C-SY-Wto"/>
+                            <constraint firstItem="pPT-Nc-pcJ" firstAttribute="centerX" secondItem="sYG-XS-r1V" secondAttribute="centerX" id="2fh-Fp-liP"/>
+                            <constraint firstItem="pPT-Nc-pcJ" firstAttribute="top" secondItem="sYG-XS-r1V" secondAttribute="bottom" constant="8" symbolic="YES" id="MIb-ha-Vf0"/>
+                            <constraint firstAttribute="centerY" secondItem="sYG-XS-r1V" secondAttribute="centerY" id="Pnl-cx-x2v"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Winery List" image="barrel.png" selectedImage="barrel.png" id="7HJ-Os-ih0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="td1-Rr-O8U" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="764"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="barrel.png" width="19" height="18"/>
+        <image name="profile.png" width="19" height="18"/>
+        <image name="wine.png" width="19" height="18"/>
     </resources>
 </document>

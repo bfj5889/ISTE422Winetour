@@ -8,43 +8,59 @@
 
 import UIKit
 
-class CreateAccountVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class CreateAccountVC: UIViewController {
     
-    @IBOutlet weak var userTypePickerView: UIPickerView!
 
-    //Create options for the account type picker wheel
-    let userType = ["Public","Winery"];
+    @IBOutlet weak var emailTxtFld: UITextField!
+    @IBOutlet weak var pwdTextFld: UITextField!
+    @IBOutlet weak var userTypeControl: UISegmentedControl!
+    @IBOutlet weak var dobPicker: UIDatePicker!
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return userType.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return userType[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        if(row == 0)
-        {
-            self.view.backgroundColor = UIColor.red;
+    @IBAction func createAccount(_ sender: AnyObject) {
+        
+        let urlString = "http://kelvin.ist.rit.edu/~winetour/winetour/api/createAccount.php"
+        
+        let email = emailTxtFld.text!
+        let pwd = pwdTextFld.text!
+        
+        //formating date into a string
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let dob = dateFormatter.string(from: dobPicker.date)
+        print(dob)
+
+        switch userTypeControl.selectedSegmentIndex {
+        case 0:
+            let userType = "Public"
+        case 1:
+            let userType = "Winery"
+        default:
+            let userType = "Public"
         }
-        else if(row == 1)
-        {
-            self.view.backgroundColor = UIColor.red;
-        }
+        
+        /**THIS STRING IS NOT FINISHED need to add user type**/
+        let postParameterString = "email=" + email + "&password=" + pwd + "&dob=" + dob
+        
+        let dataDict: NSDictionary = SendData().sendData(urlString: urlString, postParamterString: postParameterString)
+        
+        //Need to check for error and make a pop up if it failed
     }
     
-    //If c=segmented control is picked above information is not needed as well as the info in view did load
+    /**
+     return user to the sign in page
+     **/
+    @IBAction func signInBtn(_ sender: UIButton) {
+        //grab the story board
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        //create instance of the createAccount view
+        //let createAccountController = storyBoard.instantiateViewController(withIdentifier: "login") as! LoginVC
+        let returnLoginController = storyBoard.instantiateInitialViewController()
+        self.present(returnLoginController!, animated:true, completion:nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userTypePickerView.dataSource = self;
-        self.userTypePickerView.delegate = self;
 
         // Do any additional setup after loading the view.
     }
