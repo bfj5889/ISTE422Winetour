@@ -25,23 +25,25 @@ class CreateAccountVC: UIViewController {
         
         //formating date into a string
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let dob = dateFormatter.string(from: dobPicker.date)
         print(dob)
 
+        var userType: String
         switch userTypeControl.selectedSegmentIndex {
         case 0:
-            let userType = "Public"
+            userType = "public"
         case 1:
-            let userType = "Winery"
+            userType = "winery"
         default:
-            let userType = "Public"
+            userType = "public"
         }
         
-        /**THIS STRING IS NOT FINISHED need to add user type**/
-        let postParameterString = "email=" + email + "&password=" + pwd + "&dob=" + dob
+        let postParameterString = "email=" + email + "&password=" + pwd + "&userType=" + userType +  "&dob=" + dob
         
         let dataDict: NSDictionary = SendData().sendData(urlString: urlString, postParamterString: postParameterString)
+        print("dict in create account")
+        print(dataDict)
         
         //Need to check for error and make a pop up if it failed
     }

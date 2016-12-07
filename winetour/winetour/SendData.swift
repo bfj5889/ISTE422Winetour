@@ -13,9 +13,13 @@ import UIKit
  
  ****/
 class SendData {
+    var myJSON: NSDictionary?
     
     func sendData(urlString: String , postParamterString: String) -> NSDictionary {
-        var myJSON: NSDictionary?
+        print("parameter string " + postParamterString)
+        print("url string " + urlString)
+        
+        //var myJSON: NSDictionary?
         //creating URLRequest
         var request = URLRequest(url: (NSURL(string: urlString)) as! URL)
         
@@ -38,7 +42,15 @@ class SendData {
             //parsing the response
             do {
                 //converting resonse to NSDictionary
-                myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                self.myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                if let parseJSON = self.myJSON {
+                    var msg : String!
+                    msg = parseJSON["message"] as! String?
+                    var error = parseJSON["error"] as! Bool?
+                    print("printing message and error status")
+                    print(msg)
+                    print(error)
+                }
                 
                 //            //parsing the json
                 //            if let parseJSON = myJSON {
@@ -72,7 +84,17 @@ class SendData {
         
         //executing the task
         task.resume()
-        return myJSON!
+        print("the json")
+        //print(self.myJSON)
+        if (self.myJSON == nil){
+            let emptyDictionary = [String: String]()
+            return emptyDictionary as NSDictionary
+        }else{
+            return self.myJSON!
+        }
+//        DispatchQueue.main.async(execute: {
+//            return myJSON!
+//        })
         
     }//end of sendData method
 } //end of SendData Class
