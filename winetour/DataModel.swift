@@ -51,12 +51,6 @@ class DataModel {
                 print("printing json 1")
                 print(myJSON)
                 if let parseJSON = myJSON {
-                    var msg : String!
-                    msg = parseJSON["message"] as! String?
-                    let error = parseJSON["error"] as! Bool?
-                    print("printing message and error status in datamodel.swift")
-                    print(msg)
-                    print(error)
                     DispatchQueue.main.async(execute: {
                        self.delegate?.receivedData(dataModelResponse: parseJSON)
                     })

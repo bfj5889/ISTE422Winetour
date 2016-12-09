@@ -54,7 +54,9 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
             //send the query information to the dataModel
             dataModel.sendData(urlString: urlString, postParamterString: postParameterString)
 
-            let hadError = dataDict["error"] as! Bool?
+            print("printing dataDict in createAccount method of CreateAccountVC")
+            print(self.dataDict)
+            let hadError = self.dataDict["error"] as! Bool?
             print("Does the email exist? ")
             print(hadError)
             
