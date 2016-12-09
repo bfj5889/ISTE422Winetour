@@ -46,20 +46,18 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         print(pwd)
         
         if (email != "" || pwd != "") {
-/** THIS IS ONLY SET ON THE SECOND TIME AROUND**/
-            
            
+            //Creating an instance of the data model
             let dataModel = DataModel()
+            //Creating a delegate for the data model that will allow dataModel to communicate with the DataModelFinishedDelegate protocol
             dataModel.delegate = self
+            //send the query information to the dataModel
             dataModel.sendData(urlString: urlString, postParamterString: postParameterString)
 
-            
-            print("dict in create account")
-            print(dataDict)
-            print(dataDict["error"])
             let hadError = dataDict["error"] as! Bool?
             print("Does the email exist? ")
             print(hadError)
+            
             if (hadError == true){
                 self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
             }
@@ -103,9 +101,10 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func receivedData(myModel:NSDictionary) {
-        self.dataDict = myModel
-        print(myModel)
+    func receivedData(dataModelResponse:NSDictionary) {
+        self.dataDict = dataModelResponse
+        print("printing dataModelResponse")
+        print(dataModelResponse)
     }
     
     

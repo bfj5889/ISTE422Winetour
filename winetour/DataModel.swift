@@ -58,7 +58,7 @@ class DataModel {
                     print(msg)
                     print(error)
                     DispatchQueue.main.async(execute: {
-                       self.delegate?.receivedData(myModel: parseJSON)
+                       self.delegate?.receivedData(dataModelResponse: parseJSON)
                     })
                     
                 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DataModelFinishedDelegate {
-    func receivedData(myModel:NSDictionary)
+    func receivedData(dataModelResponse:NSDictionary)
 }
