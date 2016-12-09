@@ -54,15 +54,15 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
             //send the query information to the dataModel
             dataModel.sendData(urlString: urlString, postParamterString: postParameterString)
 
-            print("printing dataDict in createAccount method of CreateAccountVC")
-            print(self.dataDict)
-            let hadError = self.dataDict["error"] as! Bool?
-            print("Does the email exist? ")
-            print(hadError)
-            
-            if (hadError == true){
-                self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
-            }
+//            print("printing dataDict in createAccount method of CreateAccountVC")
+//            print(self.dataDict)
+//            let hadError = self.dataDict["error"] as! Bool?
+//            print("Does the email exist? ")
+//            print(hadError)
+//            
+//            if (hadError == true){
+//                self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
+//            }
             
         } else {
             throwOkError(title:"Can't Create Account" , message: "Email/Password Invalid Info")
@@ -107,6 +107,14 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         self.dataDict = dataModelResponse
         print("printing dataModelResponse")
         print(dataModelResponse)
+        
+        let hadError = self.dataDict["error"] as! Bool?
+        print("Does the email exist? ")
+        print(hadError)
+        
+        if (hadError == true){
+            self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
+        }
     }
     
     
