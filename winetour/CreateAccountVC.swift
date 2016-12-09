@@ -8,9 +8,11 @@
 
 import UIKit
 
-class CreateAccountVC: UIViewController {
+
+
+class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
     
-    
+    var dataDict: NSDictionary = [:]
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var pwdTextFld: UITextField!
     @IBOutlet weak var userTypeControl: UISegmentedControl!
@@ -45,7 +47,13 @@ class CreateAccountVC: UIViewController {
         
         if (email != "" || pwd != "") {
 /** THIS IS ONLY SET ON THE SECOND TIME AROUND**/
-            let dataDict: NSDictionary = DataModel().sendData(urlString: urlString, postParamterString: postParameterString)
+            
+           
+            let dataModel = DataModel()
+            dataModel.delegate = self
+            dataModel.sendData(urlString: urlString, postParamterString: postParameterString)
+
+            
             print("dict in create account")
             print(dataDict)
             print(dataDict["error"])
@@ -93,6 +101,11 @@ class CreateAccountVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func receivedData(myModel:NSDictionary) {
+        self.dataDict = myModel
+        print(myModel)
     }
     
     

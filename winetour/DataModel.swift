@@ -15,8 +15,9 @@ import UIKit
 var myJSON: NSDictionary?
 class DataModel {
     var emptyDictionary:NSDictionary = [:]
+    var delegate:DataModelFinishedDelegate?
     
-    func sendData(urlString: String , postParamterString: String) -> NSDictionary {
+    func sendData(urlString: String , postParamterString: String) {
         emptyDictionary = ["error": "nil"]
         
         print("parameter string " + postParamterString)
@@ -57,9 +58,7 @@ class DataModel {
                     print(msg)
                     print(error)
                     DispatchQueue.main.async(execute: {
-                       myJSON = parseJSON
-                        print("setting myJSON to the compiled json")
-                        print(myJSON)
+                       self.delegate?.receivedData(myModel: parseJSON)
                     })
                     
                 }
@@ -72,16 +71,6 @@ class DataModel {
         //executing the task
         task.resume()
         })
-        print("the json")
-        print(myJSON)
-        if (myJSON === nil){
-            return emptyDictionary
-        }else{
-            return myJSON!
-        }
-//        DispatchQueue.main.async(execute: {
-//            return myJSON!
-//        })
     
     }//end of sendData method
 } //end of SendData Class

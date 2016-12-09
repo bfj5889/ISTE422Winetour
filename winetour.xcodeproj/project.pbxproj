@@ -16,6 +16,7 @@
 		3F25C4651DF7846600A291A4 /* wine.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C4631DF7846600A291A4 /* wine.png */; };
 		3F25C4691DF78B2900A291A4 /* barrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C4681DF78B2900A291A4 /* barrel.png */; };
 		3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25C46C1DF79AF100A291A4 /* DataModel.swift */; };
+		3F7CBCCA1DFB137E006360EE /* DataModelFinishedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CBCC91DFB137E006360EE /* DataModelFinishedDelegate.swift */; };
 		3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95DF911DF634270051B8BE /* AppDelegate.swift */; };
 		3F95DF991DF634270051B8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF971DF634270051B8BE /* Main.storyboard */; };
 		3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF9A1DF634270051B8BE /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		3F25C4631DF7846600A291A4 /* wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine.png; sourceTree = "<group>"; };
 		3F25C4681DF78B2900A291A4 /* barrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrel.png; sourceTree = "<group>"; };
 		3F25C46C1DF79AF100A291A4 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		3F7CBCC91DFB137E006360EE /* DataModelFinishedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelFinishedDelegate.swift; sourceTree = "<group>"; };
 		3F95DF8E1DF634270051B8BE /* winetour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winetour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95DF911DF634270051B8BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F95DF981DF634270051B8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 			name = TabBarIcons;
 			sourceTree = "<group>";
 		};
+		3F7CBCC81DFB135F006360EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CBCC91DFB137E006360EE /* DataModelFinishedDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		3F95DF851DF634270051B8BE = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		3F95DF901DF634270051B8BE /* winetour */ = {
 			isa = PBXGroup;
 			children = (
+				3F7CBCC81DFB135F006360EE /* Protocols */,
 				3F25C45C1DF77DF600A291A4 /* Media */,
 				3FC5BDE01DF647B4002AEFCA /* Models */,
 				3FC5BDDF1DF647A6002AEFCA /* View Controllers */,
@@ -208,6 +219,7 @@
 				3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */,
 				28FDBEDC1DF8AF1B007A77E4 /* WineTableVC.swift in Sources */,
 				E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */,
+				3F7CBCCA1DFB137E006360EE /* DataModelFinishedDelegate.swift in Sources */,
 				28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */,
 				3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */,
 			);
