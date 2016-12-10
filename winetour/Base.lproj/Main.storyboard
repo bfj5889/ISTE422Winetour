@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mLz-xR-8d7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Wineries-->
+        <scene sceneID="bM0-5c-yPE">
+            <objects>
+                <viewController id="EVg-Aj-uD6" customClass="WineryHomeVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qg1-VD-AV2"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Sv-zQ-s1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hGD-SU-Sbr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winery Wall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xea-bN-q7k">
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="LBS-QZ-jOn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0bm-JC-Ipp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="103-map.png"/>
+                                    <segment title="" image="104-index-cards.png"/>
+                                </segments>
+                                <color key="tintColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="wineryHomeSegmentedControl:" destination="EVg-Aj-uD6" eventType="valueChanged" id="A0W-5v-0MR"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xea-bN-q7k" secondAttribute="trailing" id="IOa-iN-E1a"/>
+                            <constraint firstItem="xea-bN-q7k" firstAttribute="trailing" secondItem="LBS-QZ-jOn" secondAttribute="trailing" constant="34" id="N6I-Nn-COn"/>
+                            <constraint firstItem="1Sv-zQ-s1V" firstAttribute="top" secondItem="LBS-QZ-jOn" secondAttribute="bottom" constant="406" id="OLX-bc-OS5"/>
+                            <constraint firstItem="LBS-QZ-jOn" firstAttribute="top" secondItem="xea-bN-q7k" secondAttribute="bottom" constant="-1" id="PEg-oF-De9"/>
+                            <constraint firstItem="xea-bN-q7k" firstAttribute="top" secondItem="Qg1-VD-AV2" secondAttribute="bottom" id="bK3-ja-1wi"/>
+                            <constraint firstItem="xea-bN-q7k" firstAttribute="leading" secondItem="LBS-QZ-jOn" secondAttribute="leading" constant="-41" id="oVd-u8-anM"/>
+                            <constraint firstItem="xea-bN-q7k" firstAttribute="leading" secondItem="hGD-SU-Sbr" secondAttribute="leading" id="smn-Uu-xZ4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="Wineries" image="barrel.png" selectedImage="barrel.png" id="ArB-YT-ygI"/>
+                    <navigationItem key="navigationItem" id="4fn-kM-ZL5"/>
+                    <connections>
+                        <segue destination="Uv1-Qp-jR0" kind="show" id="zqc-xg-eLM"/>
+                        <segue destination="lpV-XX-gVa" kind="show" id="TrR-QX-9ir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0BN-5Q-oNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650.625" y="-27.464788732394368"/>
+        </scene>
+        <!--Winery List-->
         <scene sceneID="aEu-zN-uDJ">
             <objects>
-                <tableViewController id="lpV-XX-gVa" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="wineryList" storyboardIdentifier="wineryList" title="Winery List" id="lpV-XX-gVa" customClass="WineryTableVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="axt-Ne-hYU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="winery" id="vHb-Cn-v2C">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vHb-Cn-v2C" id="jrb-kw-Ly3">
                                     <frame key="frameInset" width="320" height="43"/>
@@ -29,30 +83,21 @@
                             <outlet property="delegate" destination="lpV-XX-gVa" id="tqM-ex-3G8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AaS-OS-Y3d">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="MQw-Q2-0Dn">
-                            <rect key="frame" x="38" y="7" width="245" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Winery List"/>
-                                <segment title="Wineries Near Me"/>
-                            </segments>
-                        </segmentedControl>
+                    <navigationItem key="navigationItem" title="Winery List" id="AaS-OS-Y3d">
+                        <barButtonItem key="backBarButtonItem" title="Winery Wall" id="s4E-e2-hZ7"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="Uv1-Qp-jR0" kind="show" id="LE5-Fd-Evs"/>
                         <segue destination="EYK-4Z-0eN" kind="show" id="NgW-Gx-GaY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9s-1E-c47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-27"/>
+            <point key="canvasLocation" x="1613" y="297"/>
         </scene>
         <!--Winery Map-->
         <scene sceneID="lGg-mO-ceb">
             <objects>
-                <viewController title="Winery Map" id="Uv1-Qp-jR0" sceneMemberID="viewController">
+                <viewController restorationIdentifier="wineryMap" storyboardIdentifier="wineryMap" title="Winery Map" id="Uv1-Qp-jR0" customClass="WineryMapVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Tg-nO-4UZ"/>
                         <viewControllerLayoutGuide type="bottom" id="L6b-Ee-rHV"/>
@@ -61,26 +106,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-YL-HSs">
-                                <frame key="frameInset" minY="64" width="320" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-7i-LCV"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-YL-HSs">
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Satellite"/>
                                     <segment title="Hybrid"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-7i-LCV">
-                                <frame key="frameInset" minY="93" width="320" height="426"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-6m-8C5">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Winery Map" id="70M-DR-Etj">
+                                        <barButtonItem key="backBarButtonItem" title="Winery Wall" id="IYz-dv-O6Z"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ASv-7i-LCV" firstAttribute="bottom" secondItem="L6b-Ee-rHV" secondAttribute="top" id="2mb-VP-eIU"/>
+                            <constraint firstItem="IHM-6m-8C5" firstAttribute="leading" secondItem="U2r-YL-HSs" secondAttribute="leading" id="6cF-mX-4yp"/>
+                            <constraint firstAttribute="trailing" secondItem="IHM-6m-8C5" secondAttribute="trailing" id="9uX-vE-4RK"/>
+                            <constraint firstItem="L6b-Ee-rHV" firstAttribute="top" secondItem="U2r-YL-HSs" secondAttribute="bottom" constant="443" id="IzS-UX-MJf"/>
+                            <constraint firstItem="IHM-6m-8C5" firstAttribute="trailing" secondItem="U2r-YL-HSs" secondAttribute="trailing" id="OhB-sZ-9XN"/>
+                            <constraint firstItem="U2r-YL-HSs" firstAttribute="trailing" secondItem="ASv-7i-LCV" secondAttribute="trailing" id="PPX-sl-6XR"/>
+                            <constraint firstItem="U2r-YL-HSs" firstAttribute="top" secondItem="IHM-6m-8C5" secondAttribute="bottom" id="Qgu-1D-DdY"/>
+                            <constraint firstItem="ASv-7i-LCV" firstAttribute="top" secondItem="IHM-6m-8C5" secondAttribute="bottom" constant="26" id="UZO-wI-kXF"/>
+                            <constraint firstItem="U2r-YL-HSs" firstAttribute="leading" secondItem="ASv-7i-LCV" secondAttribute="leading" id="adc-FS-niP"/>
+                            <constraint firstItem="IHM-6m-8C5" firstAttribute="leading" secondItem="KJE-gO-w8X" secondAttribute="leading" id="fvz-0i-ChV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="navigationCBarController" destination="IHM-6m-8C5" id="f7R-So-60S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTT-CA-vDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491.875" y="-482.74647887323943"/>
+            <point key="canvasLocation" x="1612.5" y="-385.56338028169017"/>
         </scene>
         <!--Winery Description-->
         <scene sceneID="7dV-mO-3JO">
@@ -98,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3V7-9d-6Qd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2494" y="243"/>
+            <point key="canvasLocation" x="2518" y="297"/>
         </scene>
         <!--Wine List-->
         <scene sceneID="s2e-Zm-LLk">
@@ -127,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYB-4T-ERs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="799.64788732394368"/>
+            <point key="canvasLocation" x="1613" y="995"/>
         </scene>
         <!--Wines-->
         <scene sceneID="wwh-aY-BvV">
@@ -144,7 +213,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSg-SV-xlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="800"/>
+            <point key="canvasLocation" x="651" y="994"/>
         </scene>
         <!--homepage-->
         <scene sceneID="iiM-jm-yDU">
@@ -173,23 +242,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcN-0a-OR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="652" y="-723"/>
-        </scene>
-        <!--Wineries-->
-        <scene sceneID="DQ5-8W-hwX">
-            <objects>
-                <navigationController id="hSG-mi-uqY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wineries" image="barrel.png" id="ubb-cZ-Ibt"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yPY-ve-ako">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lpV-XX-gVa" kind="relationship" relationship="rootViewController" id="WmE-NU-LDb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v93-VH-qs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653" y="-27"/>
         </scene>
         <!--LoginContainer-->
         <scene sceneID="su1-Ou-rpQ">
@@ -235,8 +287,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="YMO-4h-ap0" kind="relationship" relationship="viewControllers" id="zzY-fr-Ja3"/>
-                        <segue destination="hSG-mi-uqY" kind="relationship" relationship="viewControllers" id="OjV-Cb-scT"/>
                         <segue destination="zhx-ua-moK" kind="relationship" relationship="viewControllers" id="ntU-cS-gir"/>
+                        <segue destination="EVg-Aj-uD6" kind="relationship" relationship="viewControllers" id="ncH-id-0cJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -436,6 +488,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="103-map.png" width="26" height="21"/>
+        <image name="104-index-cards.png" width="26" height="17"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="barrel.png" width="19" height="18"/>
         <image name="wine.png" width="19" height="18"/>

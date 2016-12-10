@@ -27,6 +27,7 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
     func receivedData(dataModelResponse:NSDictionary) {
     }//end of receivedData
     
+
 }// end of WineryTableVC
 
 
