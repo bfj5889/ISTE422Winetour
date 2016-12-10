@@ -53,16 +53,6 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
             dataModel.delegate = self
             //send the query information to the dataModel
             dataModel.sendData(urlString: urlString, postParamterString: postParameterString)
-
-//            print("printing dataDict in createAccount method of CreateAccountVC")
-//            print(self.dataDict)
-//            let hadError = self.dataDict["error"] as! Bool?
-//            print("Does the email exist? ")
-//            print(hadError)
-//            
-//            if (hadError == true){
-//                self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
-//            }
             
         } else {
             throwOkError(title:"Can't Create Account" , message: "Email/Password Invalid Info")
@@ -87,7 +77,6 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         //create instance of the createAccount view
-        //let createAccountController = storyBoard.instantiateViewController(withIdentifier: "login") as! LoginVC
         let returnLoginController = storyBoard.instantiateInitialViewController()
         self.present(returnLoginController!, animated:true, completion:nil)
     }
@@ -115,6 +104,8 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         if (hadError == true){
             self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
         }
+        
+        // if account can be made go to home page
     }
     
     
