@@ -142,12 +142,18 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         let w = wines[indexPath.row]
         cell.textLabel?.text = w.getWineName()
         cell.detailTextLabel?.text = w.getBrand()
+        
+        if let url = URL(string: "http://kelvin.ist.rit.edu/~winetour/winetour2/images/\(w.getImage()).png") {
+            if let data = NSData(contentsOf: url) {
+                cell.imageView?.image = UIImage(data: data as Data)
+                cell.imageView?.sizeToFit()
+            }        
+        }
+        
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        self.loadWineData()
-//    }
     
     func do_table_refresh()
     {
