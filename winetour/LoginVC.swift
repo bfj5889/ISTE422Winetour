@@ -83,6 +83,9 @@ class LoginVC: UIViewController {
                             self.present(failedLoginAlert, animated: true, completion: nil)
                         } else if parseJSON["error"] as! Bool? == false { //success full login
                             
+                            print("logged in successfully")
+                            self.openApplication()
+                            
                         } else { //error from db during log in
                             
                         }
@@ -112,6 +115,18 @@ class LoginVC: UIViewController {
         //create instance of the createAccount view
         let createAccountController = storyBoard.instantiateViewController(withIdentifier: "createAccount") as! CreateAccountVC
         self.present(createAccountController, animated:true, completion:nil)
+    }
+    
+    /***
+     Push the User to the Home page after login
+     ***/
+    func openApplication() {
+        //grab the story board
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        //create instance of the createAccount view
+        let homepage = storyBoard.instantiateViewController(withIdentifier: "homepage") as! UITabBarController
+        self.present(homepage, animated:true, completion:nil)
     }
 
     override func viewDidLoad() {
