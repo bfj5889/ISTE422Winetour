@@ -29,7 +29,7 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
 
         // Load wine Data
         loadWineData()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,28 +49,6 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         dm.delegate = self
         dm.sendData(urlString: GET_ALL_WINES_URL, postParamterString: "")
         
-//        let tempWines = ((self.dataDict["Wines"]!) as! NSArray) as Array
-//        
-//        for wine in tempWines{
-//            let brand = wine["brand"]! as! String
-//            
-//            print("\(brand)")
-//        }
-//         print("Print Temp Wines")
-//        if let tempWines = (self.dataDict.value(forKey: "Wines") as! NSArray) as Array
-//        
-//        print("\(tempWines)")
-
-        
-        
-//        let tempWines = (self.dataDict.value(forKey: "Wines") as! NSArray) as Array
-//        
-//        for wine in tempWines{
-//            print("\(wine)")
-//        }
-        
-        
-        
     } // end of loadWineData
     
     func receivedData(dataModelResponse:NSDictionary) {
@@ -86,15 +64,40 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         
         // Loop through and create all the wine objects
         for wine in tempArray{
-            //print("\(wine["brand"]!)")
+            print("Wine in Temp")
+            print("\(wine)")
             
-            let name = wine["wineName"]! as! String
-            let brand = wine["brand"]! as! String
-            print("\(name)  \(brand)")
+            let wineID         = wine["wineID"]! as! String
+            let wineName       = wine["wineName"]! as! String
+            let brand          = wine["brand"]! as! String
+            //let desc         = wine["description"]! as! String
+            let dryness        = wine["dryness"]! as! String
+            let image          = wine["image"]! as! String
+            let percentAlcohol = wine["percentAlcohol"]! as! String
+            let region         = wine["region"]! as! String
+            let residualSugar  = wine["residualSugar"]! as! String
+            let varietal       = wine["varietal"]! as! String
+            let wineType       = wine["wineType"]! as! String
+            let wineYear       = wine["wineYear"]! as! String
+            let wineryID       = wine["wineryID"]! as! String
+            
+            //let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, wineDescription: desc, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType)
+            
+            let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType)
+            wines.append(w)
+            
+            //print("\(name)  \(brand)")
         }
+        print("Wines Array")
+        print("Wine Count : \(wines.count)")
+        print("\(wines)")
+        print("Get First Wine")
+        print("\(wines[0])")
+        
         
         //print( ( ((self.dataDict["Wines"]!) as! NSArray) as Array!))
-
+        
+        do_table_refresh()
         
         let hadError = self.dataDict["error"] as! Bool?
         //print("Does the email exist? ")
@@ -122,23 +125,37 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print("Wine Count in number of row in section : \(wines.count)")
+        return wines.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "wine", for: indexPath)
 
         // Configure the cell...
-
+        let w = wines[indexPath.row]
+        cell.textLabel?.text = w.getWineName()
+        cell.detailTextLabel?.text = w.getBrand()
         return cell
     }
-    */
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.loadWineData()
+//    }
+    
+    func do_table_refresh()
+    {
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+            return
+        })
+    }
 
     /*
     // Override to support conditional editing of the table view.

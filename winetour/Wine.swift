@@ -76,13 +76,13 @@ class Wine: NSObject{
         > Convenience
         > Description
      *******************************************************************************/
-    init(wineID: String, wineryID: String, wineName: String, wineDescription: String, brand: String, wineYear: String, varietal: String, dryness: String, residualSugar: String, percentAlcohol: String, image: String, region: String){
+    init(wineID: String, wineryID: String, wineName: String, brand: String, wineYear: String, varietal: String, dryness: String, residualSugar: String, percentAlcohol: String, image: String, region: String, wineType: String){
         super.init()
         // Set All Variables
         self.setWineID(wineID)
         self.setWineryID(wineryID)
         self.setWineName(wineName)
-        self.setWineDescription(wineDescription)
+        //self.setWineDescription(wineDescription)
         self.setBrand(brand)
         self.setWineYear(wineYear)
         self.setVarietal(varietal)
@@ -91,10 +91,11 @@ class Wine: NSObject{
         self.setPercentAlcohol(percentAlcohol)
         self.setImage(image)
         self.setRegion(region)
+        self.setWineType(wineType)
     }
     
     convenience override init() {
-        self.init(wineID: "Unknown", wineryID: "Unknown", wineName: "Unknown", wineDescription: "Unknown", brand: "Unknown", wineYear: "Unknown", varietal: "Unknown", dryness: "Unknown", residualSugar: "Unknown", percentAlcohol: "Unknown", image: "Unknown", region: "Unknown")
+        self.init(wineID: "Unknown", wineryID: "Unknown", wineName: "Unknown", brand: "Unknown", wineYear: "Unknown", varietal: "Unknown", dryness: "Unknown", residualSugar: "Unknown", percentAlcohol: "Unknown", image: "Unknown", region: "Unknown", wineType: "Unknown")
     }
     
     //custom to String (informal)
