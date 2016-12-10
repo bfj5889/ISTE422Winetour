@@ -155,6 +155,20 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         return cell
     }
     
+    /**
+     * Onclick send to detail
+     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get a Wines
+        let wine = wines[indexPath.row]
+        let detailVC = WineDetailGroupVC(style: .grouped)
+        detailVC.title = wine.getWineName()
+        detailVC.wine = wine
+        
+        // push detail on nav controller
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
     func do_table_refresh()
     {
         DispatchQueue.main.async(execute: {

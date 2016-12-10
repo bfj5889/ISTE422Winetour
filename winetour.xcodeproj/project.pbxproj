@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		280F35C01DFBAF5500DF05A4 /* WineTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F35BF1DFBAF5500DF05A4 /* WineTableVC.swift */; };
 		280F35C31DFBD27E00DF05A4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F35C21DFBD27E00DF05A4 /* HomeVC.swift */; };
+		280F35C51DFCC4EF00DF05A4 /* WineDetailGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F35C41DFCC4EF00DF05A4 /* WineDetailGroupVC.swift */; };
 		28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED51DF8A646007A77E4 /* Wine.swift */; };
 		28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED61DF8A646007A77E4 /* Wines.swift */; };
 		3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C45E1DF77EB900A291A4 /* 53-house.png */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		280F35BF1DFBAF5500DF05A4 /* WineTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineTableVC.swift; sourceTree = "<group>"; };
 		280F35C21DFBD27E00DF05A4 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		280F35C41DFCC4EF00DF05A4 /* WineDetailGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineDetailGroupVC.swift; sourceTree = "<group>"; };
 		28FDBED51DF8A646007A77E4 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		28FDBED61DF8A646007A77E4 /* Wines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wines.swift; sourceTree = "<group>"; };
 		3F25C45E1DF77EB900A291A4 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				280F35BF1DFBAF5500DF05A4 /* WineTableVC.swift */,
+				280F35C41DFCC4EF00DF05A4 /* WineDetailGroupVC.swift */,
 			);
 			name = Wine;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280F35C51DFCC4EF00DF05A4 /* WineDetailGroupVC.swift in Sources */,
 				3F6F701A1DFC858D00368547 /* ZommingProtocol.swift in Sources */,
 				280F35C01DFBAF5500DF05A4 /* WineTableVC.swift in Sources */,
 				3F6F70271DFC9E2400368547 /* WineryHomeVC.swift in Sources */,
