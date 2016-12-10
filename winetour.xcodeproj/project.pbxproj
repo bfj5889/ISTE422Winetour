@@ -25,6 +25,7 @@
 		3F6F70211DFC978B00368547 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F70201DFC978B00368547 /* 103-map.png */; };
 		3F6F70251DFC99FD00368547 /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F70241DFC99FD00368547 /* 104-index-cards.png */; };
 		3F6F70271DFC9E2400368547 /* WineryHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F70261DFC9E2400368547 /* WineryHomeVC.swift */; };
+		3F6F702D1DFCC7E300368547 /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F702C1DFCC7E300368547 /* backArrow.png */; };
 		3F7CBCCA1DFB137E006360EE /* DataModelFinishedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CBCC91DFB137E006360EE /* DataModelFinishedDelegate.swift */; };
 		3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95DF911DF634270051B8BE /* AppDelegate.swift */; };
 		3F95DF991DF634270051B8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF971DF634270051B8BE /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		3F6F70201DFC978B00368547 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
 		3F6F70241DFC99FD00368547 /* 104-index-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards.png"; sourceTree = "<group>"; };
 		3F6F70261DFC9E2400368547 /* WineryHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineryHomeVC.swift; sourceTree = "<group>"; };
+		3F6F702C1DFCC7E300368547 /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
 		3F7CBCC91DFB137E006360EE /* DataModelFinishedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelFinishedDelegate.swift; sourceTree = "<group>"; };
 		3F95DF8E1DF634270051B8BE /* winetour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winetour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95DF911DF634270051B8BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		3F6F701F1DFC973F00368547 /* Winery Icons */ = {
 			isa = PBXGroup;
 			children = (
+				3F6F702C1DFCC7E300368547 /* backArrow.png */,
 				3F6F70241DFC99FD00368547 /* 104-index-cards.png */,
 				3F6F70201DFC978B00368547 /* 103-map.png */,
 			);
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6F702D1DFCC7E300368547 /* backArrow.png in Resources */,
 				3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */,
 				3F25C4641DF7846600A291A4 /* profile.png in Resources */,
 				3F25C4691DF78B2900A291A4 /* barrel.png in Resources */,
