@@ -11,6 +11,27 @@ import MapKit
 
 class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataModelFinishedDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+
+    @IBAction func backToWineryWall(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let wineryWall = storyBoard.instantiateViewController(withIdentifier: "wineryWall") as! WineryHomeVC
+        self.present(wineryWall, animated:true, completion:nil)
+    }
+    
+    @IBAction func wineryMapSegmentedControl(_ sender: UISegmentedControl) {
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        case 2: // or default
+            mapView.mapType = .hybrid
+        default:
+            mapView.mapType = .standard
+        }
+    }
+    
     func receivedData(dataModelResponse:NSDictionary) {
     
     }
