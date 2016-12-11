@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import ToolKit
 
 class LoginVC: UIViewController {
     
@@ -84,6 +85,29 @@ class LoginVC: UIViewController {
                         } else if parseJSON["error"] as! Bool? == false { //success full login
                             
                             print("logged in successfully")
+                            //find current date
+                            var localTimeZoneAbbreviation: String { return  NSTimeZone.local.abbreviation(for: Date())! }
+                            let currentDate = Date()
+
+                            //save login credentails(email and current date) to plist
+                            let path1 = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
+                            
+                            let loginDict = NSMutableDictionary(contentsOfFile: path1!)! as NSMutableDictionary
+                            let loginInfo = loginDict.object(forKey: "Login")
+                            
+                            print("printing login info")
+                            print(loginInfo)
+                            loginDict.setValue(email, forKey: "email")
+                            
+                            loginDict.setValue(currentDate, forKey: "lastLogin")
+                            
+                            print("reprinting loginDict after changes")
+                            print(loginDict)
+                            loginDict.write(toFile: path1!, atomically: true)
+                            
+                            
+                            
+                            //push user to home page
                             self.openApplication()
                             
                         } else { //error from db during log in

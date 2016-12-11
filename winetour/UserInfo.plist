@@ -5,10 +5,10 @@
 	<key>Login</key>
 	<array>
 		<dict>
-			<key>email</key>
-			<string>info@foxrunvineyards.com</string>
 			<key>lastLogin</key>
-			<string>2016-12-11T22:22:39Z</string>
+			<string></string>
+			<key>email</key>
+			<string></string>
 		</dict>
 	</array>
 </dict>

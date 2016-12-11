@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var loginDetails: Array<AnyObject>?
     //var loginInfo: [:] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -27,13 +28,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let tempDict = NSDictionary(contentsOfFile: path){
                 //make an Array that holds all the attributes for the specfic park
                 let tempArray = (tempDict.value(forKey: "Login") as! NSArray) as Array
-                for loginDictionary in tempArray {
-                    let lastLogin = loginDictionary["lastLoginDate"] as! String
-                    let email = loginDictionary["email"] as! String
-                    print(loginDictionary)
-                }
+                loginDetails = tempArray
             }
         }
+        
+        var lastLogin: String
+        var email: String
+        for loginDictionary in loginDetails! {
+            lastLogin = loginDictionary["lastLogin"] as! String
+            email = loginDictionary["email"] as! String
+            
+            
+            //check to see if user is logged in
+            //if not send to login page, otherwise sned to home page
+            if (lastLogin != "" && email != ""){
+                //send to home
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "homepageTab") as UIViewController
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = initialViewControlleripad
+                self.window?.makeKeyAndVisible()
+            } else{
+                //send to login
+            }
+        }
+        
         return true
     }
 
