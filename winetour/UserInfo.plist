@@ -2,9 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>lastLoginDate</key>
-	<date>2016-12-11T02:22:48Z</date>
-	<key>email</key>
-	<string></string>
+	<key>Login</key>
+	<array>
+		<dict>
+			<key>email</key>
+			<string>info@foxrunvineyards.com</string>
+			<key>lastLogin</key>
+			<string>2016-12-11T22:22:39Z</string>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -13,13 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    //var loginInfo: [:] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         /* https://makeapppie.com/2016/02/11/how-to-use-property-lists-plist-in-swift/ */
-        var plistData: [String: AnyObject] = [:]
-        let plistPath:String? = Bundle.main.path(forResource: "UserInfo", ofType: "plist")!
-        let plistXML = FileManager.default.contents(atPath: plistPath!)!
+//        var plistData: [String: AnyObject] = [:]
+//        let plistPath = Bundle.main.path(forResource: "UserInfo", ofType: "plist")!
+        
+        if let path = Bundle.main.path(forResource: "UserInfo", ofType: "plist") {
+            
+            //if the contents of the plist can be put into a dictionary enter the loop
+            if let tempDict = NSDictionary(contentsOfFile: path){
+                //make an Array that holds all the attributes for the specfic park
+                let tempArray = (tempDict.value(forKey: "Login") as! NSArray) as Array
+                for loginDictionary in tempArray {
+                    let lastLogin = loginDictionary["lastLoginDate"] as! String
+                    let email = loginDictionary["email"] as! String
+                    print(loginDictionary)
+                }
+            }
+        }
         return true
     }
 
