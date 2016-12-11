@@ -18,7 +18,7 @@ class WineryHomeVC: UIViewController {
             self.present(homepage, animated:true, completion:nil)
         case 1:
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let homepage = storyBoard.instantiateViewController(withIdentifier: "wineryList") as! UITableViewController
+            let homepage = storyBoard.instantiateViewController(withIdentifier: "wineryListNav") as! UINavigationController
             self.present(homepage, animated:true, completion:nil)
         default:
             throwOkError(title: "Error Changing Page", message: "There was an error with the segmented control. Try restarting you app to fix this.")
