@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        /* https://makeapppie.com/2016/02/11/how-to-use-property-lists-plist-in-swift/ */
+        var plistData: [String: AnyObject] = [:]
+        let plistPath:String? = Bundle.main.path(forResource: "UserInfo", ofType: "plist")!
+        let plistXML = FileManager.default.contents(atPath: plistPath!)!
         return true
     }
 
