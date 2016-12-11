@@ -268,7 +268,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="53-house.png" id="Ter-QC-66N"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="53-house.png" selectedImage="53-house.png" id="Ter-QC-66N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcN-0a-OR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
