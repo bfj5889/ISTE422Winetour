@@ -110,16 +110,23 @@
                     <navigationItem key="navigationItem" id="AaS-OS-Y3d">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Winery Wall" id="s4E-e2-hZ7"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mlr-a6-NSa">
-                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="919-Pp-gqP">
+                            <rect key="frame" x="123" y="7" width="75" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="53-house.png">
+                                <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backToHomeButton:" destination="lpV-XX-gVa" eventType="touchUpInside" id="Jfq-8B-teW"/>
+                            </connections>
                         </button>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9s-1E-c47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2501" y="314"/>
+            <point key="canvasLocation" x="2499.375" y="313.73239436619718"/>
         </scene>
         <!--Winery Map-->
         <scene sceneID="lGg-mO-ceb">
@@ -155,7 +162,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1j-GK-JFy">
                                 <frame key="frameInset" minY="35" width="38" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="backArrow.png"/>
+                                <state key="normal" image="53-house.png"/>
                                 <connections>
                                     <action selector="backToWineryWall:" destination="Uv1-Qp-jR0" eventType="touchUpInside" id="3TC-DE-gff"/>
                                 </connections>
@@ -530,7 +537,6 @@
         <image name="103-map.png" width="26" height="21"/>
         <image name="104-index-cards.png" width="26" height="17"/>
         <image name="53-house.png" width="22" height="22"/>
-        <image name="backArrow.png" width="512" height="512"/>
         <image name="barrel.png" width="19" height="18"/>
         <image name="wine.png" width="19" height="18"/>
     </resources>

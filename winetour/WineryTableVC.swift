@@ -24,6 +24,12 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
         }
     }
     
+    @IBAction func backToHomeButton(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let wineryWall = storyBoard.instantiateViewController(withIdentifier: "homepage") as! UITabBarController
+        self.present(wineryWall, animated:true, completion:nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
