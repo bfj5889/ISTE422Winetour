@@ -33,6 +33,8 @@
 		3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF9A1DF634270051B8BE /* Assets.xcassets */; };
 		3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF9C1DF634270051B8BE /* LaunchScreen.storyboard */; };
 		3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5BDE31DF65674002AEFCA /* LoginVC.swift */; };
+		3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */; };
+		3FDDC0371DFCF0A000745ABD /* CheckUserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDC0361DFCF0A000745ABD /* CheckUserLogin.swift */; };
 		E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		3F95DF9D1DF634270051B8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F95DF9F1DF634270051B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC5BDE31DF65674002AEFCA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
+		3FDDC0361DFCF0A000745ABD /* CheckUserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUserLogin.swift; sourceTree = "<group>"; };
 		E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +170,7 @@
 				3F95DF9A1DF634270051B8BE /* Assets.xcassets */,
 				3F95DF9C1DF634270051B8BE /* LaunchScreen.storyboard */,
 				3F95DF9F1DF634270051B8BE /* Info.plist */,
+				3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */,
 			);
 			path = winetour;
 			sourceTree = "<group>";
@@ -175,9 +180,7 @@
 			children = (
 				3F6F70121DFC80FA00368547 /* Winery */,
 				280F35C11DFBAF5E00DF05A4 /* Wine */,
-				3FC5BDE31DF65674002AEFCA /* LoginVC.swift */,
-				E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */,
-				280F35C21DFBD27E00DF05A4 /* HomeVC.swift */,
+				3FDDC0381DFCF0AD00745ABD /* General */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -192,6 +195,17 @@
 				3F6F701D1DFC874700368547 /* Wineries.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3FDDC0381DFCF0AD00745ABD /* General */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5BDE31DF65674002AEFCA /* LoginVC.swift */,
+				E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */,
+				280F35C21DFBD27E00DF05A4 /* HomeVC.swift */,
+				3FDDC0361DFCF0A000745ABD /* CheckUserLogin.swift */,
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,7 @@
 				3F6F702D1DFCC7E300368547 /* backArrow.png in Resources */,
 				3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */,
 				3F25C4641DF7846600A291A4 /* profile.png in Resources */,
+				3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */,
 				3F25C4691DF78B2900A291A4 /* barrel.png in Resources */,
 				3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */,
 				3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */,
@@ -286,6 +301,7 @@
 				3F7CBCCA1DFB137E006360EE /* DataModelFinishedDelegate.swift in Sources */,
 				3F6F701C1DFC873B00368547 /* Winery.swift in Sources */,
 				3F6F70141DFC811D00368547 /* WineryMapVC.swift in Sources */,
+				3FDDC0371DFCF0A000745ABD /* CheckUserLogin.swift in Sources */,
 				28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */,
 				3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */,
 				3F6F701E1DFC874700368547 /* Wineries.swift in Sources */,
