@@ -76,8 +76,16 @@ class Winery: NSObject, MKAnnotation{
         self.accountID = accountID
         self.wineryID = wineryID
         self.setWineryName(wineryName)
+        self.setAddress(address)
+        self.setCity(city)
+        self.setState(state)
+        self.setZipCode(zipCode)
+        self.setCountry(country)
+        self.setPhone(phone)
+        self.setWineryDescription(wineryDescription)
+        self.setWebsite(website)
         self.setLocation(location)
-
+        
     }
     
     convenience override init() {

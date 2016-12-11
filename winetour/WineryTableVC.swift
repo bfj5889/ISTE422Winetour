@@ -2,7 +2,7 @@
 //  WineryTableVC.swift
 //  winetour
 //
-//  Created by Student on 12/10/16.
+//  Created by Dustin Spitz on 12/10/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 
@@ -64,8 +64,7 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
         let tempArray = (self.dataDict.value(forKey: "Wineries") as! NSArray) as Array
         // Loop through and create all the wine objects
         for winery in tempArray{
-            print("Winery in Temp")
-            print("\(winery)")
+            //print("\(winery)")
             
             let accountID = winery["accountID"] as! String
             let wineryID = winery["wineryID"]! as! String
@@ -87,16 +86,17 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
             let wineryLocation = CLLocation(latitude: latitude!, longitude: longitude!)
             
             let newWinery = Winery(accountID: accountID, wineryID: wineryID, wineryName: wineryName,  address: address, city: city, state: state, zipCode: zipCode, country: country, phone: phone, wineryDescription: wineryDescription, website: website, location:wineryLocation)
+            
             wineries.append(newWinery)
         }
         
-        print("Wines Array")
-        print("Wine Count : \(wineries.count)")
-        print("\(wineries)")
-        print("Get First Wine")
-        print("\(wineries[0])")
+        //        print("Wines Array")
+        //        print("Wine Count : \(wineries.count)")
+        //        print("\(wineries)")
+        //        print("Get First Wine")
+        //        print("\(wineries[0])")
         
-        do_table_refresh()
+        do_table_refresh() // keeps winery count updated
         
         let hadError = self.dataDict["error"] as! Bool?
         
@@ -111,7 +111,7 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
         self.present(failedLoginAlert, animated: true, completion: nil)
     }
     
-
+    
     func do_table_refresh()
     {
         DispatchQueue.main.async(execute: {
@@ -125,6 +125,10 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    /**
+     * START TABLE FORMATS
+     */
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -147,16 +151,31 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
         cell.textLabel?.text = w.getWineryName()
         cell.detailTextLabel?.text = w.getState()
         
-//        if let url = URL(string: "http://kelvin.ist.rit.edu/~winetour/winetour2/images/\(w.getImage()).png") {
-//            if let data = NSData(contentsOf: url) {
-//                cell.imageView?.image = UIImage(data: data as Data)
-//                cell.imageView?.sizeToFit()
-//            }
-//        }
+        //        if let url = URL(string: "http://kelvin.ist.rit.edu/~winetour/winetour2/images/\(w.getImage()).png") {
+        //            if let data = NSData(contentsOf: url) {
+        //                cell.imageView?.image = UIImage(data: data as Data)
+        //                cell.imageView?.sizeToFit()
+        //            }
+        //        }
         
         cell.accessoryType = .disclosureIndicator
         
         return cell
+    }
+    
+    /**
+     * Onclick send to detail
+     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get a Wines
+        let winery = wineries[indexPath.row]
+        print("\(winery.description)")
+        let detailVC = WineryTableDetailGroupVC(style: .grouped)
+        detailVC.title = winery.getWineryName()
+        detailVC.winery = winery
+        
+        // push detail on nav controller
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }// end of WineryTableVC
