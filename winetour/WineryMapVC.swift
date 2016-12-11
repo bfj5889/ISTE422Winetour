@@ -15,7 +15,7 @@ class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataMod
 
     @IBAction func backToWineryWall(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let wineryWall = storyBoard.instantiateViewController(withIdentifier: "wineryWall") as! WineryHomeVC
+        let wineryWall = storyBoard.instantiateViewController(withIdentifier: "homepage") as! UITabBarController
         self.present(wineryWall, animated:true, completion:nil)
     }
     
