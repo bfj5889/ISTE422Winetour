@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
     // Dictionary to pull data from SQL Database
@@ -69,8 +70,6 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
             let accountID = winery["accountID"] as! String
             let wineryID = winery["wineryID"]! as! String
             let wineryName = winery["wineryName"]! as! String
-            let longitude = winery["longitude"] as! String
-            let latitude = winery["latitude"] as! String
             let address = winery["address"] as! String
             let city = winery["city"] as! String
             let state = winery["state"] as! String
@@ -80,7 +79,14 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
             let wineryDescription = winery["description"] as! String
             let website = winery["website"] as! String
             
-            let newWinery = Winery(accountID: accountID, wineryID: wineryID, wineryName: wineryName, longitude: longitude, latitude: latitude, address: address, city: city, state: state, zipCode: zipCode, country: country, phone: phone, wineryDescription: wineryDescription, website: website)
+            let latitudeString = (winery["latitude"]! as! NSString)
+            let latitude = Double(latitudeString as String)
+            let longitudeString = (winery["longitude"]! as! NSString)
+            let longitude = Double(longitudeString as String)
+            
+            let wineryLocation = CLLocation(latitude: latitude!, longitude: longitude!)
+            
+            let newWinery = Winery(accountID: accountID, wineryID: wineryID, wineryName: wineryName,  address: address, city: city, state: state, zipCode: zipCode, country: country, phone: phone, wineryDescription: wineryDescription, website: website, location:wineryLocation)
             wineries.append(newWinery)
         }
         
