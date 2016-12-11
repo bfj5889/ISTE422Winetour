@@ -10,6 +10,8 @@
 		280F35C01DFBAF5500DF05A4 /* WineTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F35BF1DFBAF5500DF05A4 /* WineTableVC.swift */; };
 		280F35C31DFBD27E00DF05A4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F35C21DFBD27E00DF05A4 /* HomeVC.swift */; };
 		280F35C51DFCC4EF00DF05A4 /* WineDetailGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F35C41DFCC4EF00DF05A4 /* WineDetailGroupVC.swift */; };
+		28C6C8221DFE071E006A8DC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C6C8211DFE071E006A8DC4 /* MapKit.framework */; };
+		28C6C8241DFE0724006A8DC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C6C8231DFE0724006A8DC4 /* CoreLocation.framework */; };
 		28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED51DF8A646007A77E4 /* Wine.swift */; };
 		28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED61DF8A646007A77E4 /* Wines.swift */; };
 		3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C45E1DF77EB900A291A4 /* 53-house.png */; };
@@ -42,6 +44,8 @@
 		280F35BF1DFBAF5500DF05A4 /* WineTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineTableVC.swift; sourceTree = "<group>"; };
 		280F35C21DFBD27E00DF05A4 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		280F35C41DFCC4EF00DF05A4 /* WineDetailGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineDetailGroupVC.swift; sourceTree = "<group>"; };
+		28C6C8211DFE071E006A8DC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		28C6C8231DFE0724006A8DC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		28FDBED51DF8A646007A77E4 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		28FDBED61DF8A646007A77E4 /* Wines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wines.swift; sourceTree = "<group>"; };
 		3F25C45E1DF77EB900A291A4 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C6C8241DFE0724006A8DC4 /* CoreLocation.framework in Frameworks */,
+				28C6C8221DFE071E006A8DC4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +96,15 @@
 				280F35C41DFCC4EF00DF05A4 /* WineDetailGroupVC.swift */,
 			);
 			name = Wine;
+			sourceTree = "<group>";
+		};
+		28C6C8201DFE071E006A8DC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28C6C8231DFE0724006A8DC4 /* CoreLocation.framework */,
+				28C6C8211DFE071E006A8DC4 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3F25C45C1DF77DF600A291A4 /* Media */ = {
@@ -147,6 +162,7 @@
 			children = (
 				3F95DF901DF634270051B8BE /* winetour */,
 				3F95DF8F1DF634270051B8BE /* Products */,
+				28C6C8201DFE071E006A8DC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

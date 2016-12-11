@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import MapKit
 
-class Winery: NSObject{
+class Winery: NSObject, MKAnnotation{
     /*******************************************************************************
      Winery Variables
      *******************************************************************************/
@@ -52,6 +53,16 @@ class Winery: NSObject{
     // VARCHAR(100)
     private var website : String = ""
     
+    private var location : CLLocation?
+    
+    // Conform to MKProtocol
+    
+    @objc var coordinate: CLLocationCoordinate2D {
+        get{
+            return getLocation()!.coordinate
+        }
+    }
+    
     
     /*******************************************************************************
      INITIALIZERS
@@ -59,28 +70,36 @@ class Winery: NSObject{
      > Convenience
      > Description
      *******************************************************************************/
-    init(accountID: String, wineryID: String, wineryName: String, longitude: String, latitude: String, address: String, city: String, state: String, zipCode: String, country: String, phone: String, wineryDescription: String, website: String){
+    init(accountID: String, wineryID: String, wineryName: String, address: String, city: String, state: String, zipCode: String, country: String, phone: String, wineryDescription: String, website: String, location:CLLocation?){
         super.init()
         // Set All Variables
         self.accountID = accountID
         self.wineryID = wineryID
         self.setWineryName(wineryName)
-
+        self.setLocation(location)
 
     }
     
     convenience override init() {
-        self.init(accountID: "Unknown", wineryID: "Unknown", wineryName: "Unknown", longitude: "Unknown", latitude: "Unknown", address: "Unknown", city: "Unknown", state: "Unknown", zipCode: "Unknown", country: "Unknown", phone: "Unknown", wineryDescription: "No Description", website: "No Website given")
+        self.init(accountID: "Unknown", wineryID: "Unknown", wineryName: "Unknown", address: "Unknown", city: "Unknown", state: "Unknown", zipCode: "Unknown", country: "Unknown", phone: "Unknown", wineryDescription: "No Description", website: "No Website given", location: nil)
     }
     
     //custom to String (informal)
     override var description: String{
-        return "\tacccountID: \(accountID) \n \twineryID: \(wineryID) \n \twineryName: \(wineryName) \n \twlongitude: \(longitude) \n \tlatitude: \(latitude) \n \taddress: \(address) \n \tcity: \(city) \n \tstate: \(state) \n \tzipCode \(zipCode) \n \tcountry: \(country) \n \tphone: \(phone) \n \twineryDescription: \(wineryDescription) \n \twebsite: \(website) \n "
+        return "\tacccountID: \(accountID) \n \twineryID: \(wineryID) \n \twineryName: \(wineryName) \n \n \taddress: \(address) \n \tcity: \(city) \n \tstate: \(state) \n \tzipCode \(zipCode) \n \tcountry: \(country) \n \tphone: \(phone) \n \twineryDescription: \(wineryDescription) \n \twebsite: \(website) \n "
     }
     
     /*******************************************************************************
      GETTERS SETTERS
      *******************************************************************************/
+    
+    //Location variables
+    func getLocation() -> CLLocation?{
+        return location
+    }
+    func setLocation(_ value: CLLocation?) {
+        location = value
+    }
     
     // WineID
     func getAccountID() -> String{
