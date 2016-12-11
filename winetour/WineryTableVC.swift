@@ -55,9 +55,6 @@ class WineryTableVC: UITableViewController, DataModelFinishedDelegate {
         self.dataDict = dataModelResponse
         
         let tempArray = (self.dataDict.value(forKey: "Wineries") as! NSArray) as Array
-        print("The temp array")
-        print(tempArray)
-        
         // Loop through and create all the wine objects
         for winery in tempArray{
             print("Winery in Temp")
