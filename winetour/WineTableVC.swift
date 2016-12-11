@@ -70,7 +70,7 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
             let wineID         = wine["wineID"]! as! String
             let wineName       = wine["wineName"]! as! String
             let brand          = wine["brand"]! as! String
-            //let desc         = wine["description"]! as! String
+            let desc         = wine["description"]! as! String
             let dryness        = wine["dryness"]! as! String
             let image          = wine["image"]! as! String
             let percentAlcohol = wine["percentAlcohol"]! as! String
@@ -83,7 +83,8 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
             
             //let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, wineDescription: desc, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType)
             
-            let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType)
+            let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType, wineDesc: desc)
+            
             wines.append(w)
             
             //print("\(name)  \(brand)")

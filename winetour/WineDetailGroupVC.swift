@@ -41,15 +41,20 @@ class WineDetailGroupVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    /**
+     *  ADD TITLES FOR SECTIONS
+     */
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var title = ""
         switch section{
-        case LANDMARK_SECTION:
-            title = "Landmark Name"
-        case STATE_SECTION:
-            title = "Landmark State"
-        case COORDINATE_SECTION:
-            title = "Landmark Coordinates"
+        case NAME:
+            title = "Wine Name"
+        case DESC:
+            title = "Description"
+        case BRAND:
+            title = "Brand"
+        case WINE_YEAR:
+            title = "Year"
         default:
             break
             
@@ -57,6 +62,71 @@ class WineDetailGroupVC: UITableViewController {
         return title
     }
 
+    /**
+     *  IF SECTION SELECTED PERFORM ACTION
+     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var msg = "";
+        
+        switch indexPath.section{
+        case NAME:
+            msg = wine.getWineName()
+        case DESC:
+            msg = wine.getWineDescription()
+        case BRAND:
+            msg = wine.getBrand()
+        case WINE_YEAR:
+            msg = wine.getWineYear()
+        default:
+            break
+        }
+        
+        // Pop up Alert
+        let alert = UIAlertController(title: "Tapped a Row", message: msg, preferredStyle: .alert)
+        
+        // handler nil, don't need to do anything when they tap ok button
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    /**
+     *  FILL IN INFORMATION
+     */
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")
+        
+        // Create Programmatically
+        if (cell == nil) {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "reuseIdentifier")
+        }
+        
+        // Swap
+        switch indexPath.section{
+        case NAME:
+            cell?.textLabel?.text = wine.getWineName()
+        case DESC:
+            cell?.textLabel?.text = wine.getWineDescription()
+        case BRAND:
+            cell?.textLabel?.text = wine.getBrand()
+//            let url = URL(string: park.getImageLink())
+//            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise
+//            cell?.imageView?.image = UIImage(data: data!)
+        case WINE_YEAR:
+            cell?.textLabel?.text = wine.getWineYear()
+        default:
+            break
+        }
+        
+        cell?.textLabel?.numberOfLines = 0 // Use as many lines as you need
+        //cell?.textLabel?.backgroundColor = UIColor(red: 216.0, green: 216.0, blue: 216.0, alpha: 1.0)
+        return cell!
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,12 +136,12 @@ class WineDetailGroupVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
     /*
