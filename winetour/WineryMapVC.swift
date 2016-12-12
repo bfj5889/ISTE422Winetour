@@ -213,20 +213,44 @@ class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataMod
     
     // Left = wiki, right = navigation
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let ab = view.annotation as! Winery
-        
-        // Set Controller Actions
-        if control == view.leftCalloutAccessoryView {
-            UIApplication.shared.open(NSURL(string: ab.getWebsite() )! as URL)
-        } else if control == view.rightCalloutAccessoryView {
-            //let dir = MKPlacemark(coordinate: ab.coordinate)
-            let dir = MKPlacemark(coordinate: ab.coordinate, addressDictionary: nil)
-            let map = MKMapItem(placemark: dir)
-            map.name  = ab.getWineryName()
-            map.openInMaps(launchOptions: nil)
+        if control.tag == 0{
+            /* Old way to open site in browser app */
+            //UIApplication.shared.openURL(NSURL(string: "\(currentAnnotation.getLink())")! as URL)
+            if (view.annotation?.title)! != "My Location"{
+                let currentAnnotation = view.annotation as! Winery
+                let site = URL(string: currentAnnotation.getWebsite())
+                if let checkURL = site {
+                    if UIApplication.shared.canOpenURL(checkURL){
+                        UIApplication.shared.open(site!, options: [:], completionHandler: nil)
+                        print("url successfully opened")
+                    }
+                }
+            } else{
+                
+            }
+            
         }
-        
+        else if control.tag == 1{
+            
+            if (view.annotation?.title)! != "My Location"{
+                let currentAnnotation = view.annotation as! Winery
+                let parkName = currentAnnotation.getLocation()
+                let placemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
+                let mapItem = MKMapItem(placemark: placemark)
+                mapItem.name = "\(parkName)"
+                //You could also choose: MKLaunchOptionsDirectionsModeWalking
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                mapItem.openInMaps(launchOptions: launchOptions)
+            }
+            else{
+            }
+        }
+        else{
+            print("Error in program")
+        }
     }
+
+
     
 
 }
