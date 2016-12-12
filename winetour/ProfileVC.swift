@@ -12,13 +12,14 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
 
     // Dictionary to pull data from SQL Database
     var dataDict: NSDictionary!
+    var profileDict : NSDictionary!
     
     @IBOutlet weak var userNameLbl: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadProfileData()
         // Do any additional setup after loading the view.
     }
 
@@ -30,7 +31,7 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
     /***************************************************
      Function to load all profile to the app
      ***************************************************/
-    func loadWineryData(){
+    func loadProfileData(){
         /** Constant Variables **/
         let GET_PROFILE_URL = "http://kelvin.ist.rit.edu/~winetour/winetour2/api/account/getProfile.php"
         let defaults = UserDefaults.standard
@@ -49,16 +50,22 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
         
         let tempArray = (self.dataDict.value(forKey: "Profile") as! NSArray) as Array
         // Loop through and create all the profile objects
+        print("printing temp array")
+        print(tempArray)
         for profileInfo in tempArray{
             //print("\(winery)")
-        
-            //wineries.append(newWinery)
+            let fName = profileInfo["firstName"]
+            let lName = profileInfo["lastName"]
+            profileDict.setValue(fName as Any, forKey: "fName")
+            profileDict.setValue(lName as Any, forKey: "lName")
         }
+        let name = "\(profileDict["firstname"] as! String) \(profileDict["lastName"] as! String)"
+        userNameLbl.text? = name
         
         let hadError = self.dataDict["error"] as! Bool?
         
         if (hadError == true){
-            self.throwOkError(title:"Error in database." , message:"Wineries can not be found. Restart app and try again")
+            self.throwOkError(title:"Error in database." , message:"Your profile could not be found. Restart app and try again")
         }
     }
     
