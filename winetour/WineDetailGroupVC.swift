@@ -17,19 +17,18 @@ class WineDetailGroupVC: UITableViewController {
     
     
     let NAME        = 0
-    let BRAND       = 1
-    let WINE_YEAR   = 2
-    let DESC        = 3
-    
-    // DETAIL GROUP 1
-    let WINE_TYPE   = 4
-    let REGION      = 5
-    let PCT_ALCOHOL = 6
-    let RES_SUGAR   = 7
-    let DRYNESS     = 8
-    let VARIETAL    = 9
-    let IMAGE       = 10
-    
+    //let BRAND       = 1
+    let WINE_YEAR   = 1
+    let DESC        = 2
+//    // DETAIL GROUP 1
+//    let WINE_TYPE   = 4
+//    let REGION      = 5
+//    let PCT_ALCOHOL = 6
+//    let RES_SUGAR   = 7
+//    let DRYNESS     = 8
+//    let VARIETAL    = 9
+//    let IMAGE       = 10
+//    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +48,10 @@ class WineDetailGroupVC: UITableViewController {
         switch section{
         case NAME:
             title = "Wine Name"
-        case DESC:
-            title = "Description"
-        case BRAND:
-            title = "Brand"
         case WINE_YEAR:
             title = "Year"
+        case DESC:
+            title = "Description"
         default:
             break
             
@@ -71,12 +68,10 @@ class WineDetailGroupVC: UITableViewController {
         switch indexPath.section{
         case NAME:
             msg = wine.getWineName()
-        case DESC:
-            msg = wine.getWineDescription()
-        case BRAND:
-            msg = wine.getBrand()
         case WINE_YEAR:
             msg = wine.getWineYear()
+        case DESC:
+            msg = wine.getWineDescription()
         default:
             break
         }
@@ -93,7 +88,7 @@ class WineDetailGroupVC: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-    
+
     /**
      *  FILL IN INFORMATION
      */
@@ -109,21 +104,22 @@ class WineDetailGroupVC: UITableViewController {
         switch indexPath.section{
         case NAME:
             cell?.textLabel?.text = wine.getWineName()
-        case DESC:
-            cell?.textLabel?.text = wine.getWineDescription()
-        case BRAND:
-            cell?.textLabel?.text = wine.getBrand()
-//            let url = URL(string: park.getImageLink())
-//            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise
-//            cell?.imageView?.image = UIImage(data: data!)
+//            if let url = URL(string: "http://kelvin.ist.rit.edu/~winetour/winetour2/images/\(wine.getImage()).png") {
+//                if let data = NSData(contentsOf: url) {
+//                    cell?.imageView?.image = UIImage(data: data as Data)
+//                }
+//            }
         case WINE_YEAR:
             cell?.textLabel?.text = wine.getWineYear()
+        case DESC:
+            cell?.textLabel?.text = wine.getWineDescription()
         default:
             break
         }
         
         cell?.textLabel?.numberOfLines = 0 // Use as many lines as you need
-        //cell?.textLabel?.backgroundColor = UIColor(red: 216.0, green: 216.0, blue: 216.0, alpha: 1.0)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
         return cell!
     }
     

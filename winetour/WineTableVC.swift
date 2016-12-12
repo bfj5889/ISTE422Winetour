@@ -163,7 +163,7 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         // Get a Wines
         let wine = wines[indexPath.row]
         let detailVC = WineDetailGroupVC(style: .grouped)
-        detailVC.title = wine.getWineName()
+        detailVC.title = wine.getBrand()
         detailVC.wine = wine
         
         // push detail on nav controller
