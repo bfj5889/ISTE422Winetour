@@ -66,10 +66,13 @@ class LoginVC: UIViewController {
                     
                     //creating a string
                     var msg : String!
-                    
+                    var accountID : NSNumber
+
                     //getting the json response by parts
                     msg = parseJSON["message"] as! String?
                     hadError = parseJSON["error"] as! Bool?
+                    accountID = parseJSON["accountID"] as! NSNumber!
+                    let accountIDString = String(describing: accountID)
                     
                     //printing the response
                     print(msg)
@@ -99,6 +102,7 @@ class LoginVC: UIViewController {
                             
                             defaults.setValue(email, forKey: defaultKeys.email)
                             defaults.setValue(stringDate, forKey: defaultKeys.lastLogin)
+                            defaults.setValue(accountIDString, forKey: defaultKeys.accountID)
                             
                             defaults.synchronize()
                             

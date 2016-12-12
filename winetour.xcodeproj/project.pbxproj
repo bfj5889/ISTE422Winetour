@@ -40,7 +40,6 @@
 		3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95DF9C1DF634270051B8BE /* LaunchScreen.storyboard */; };
 		3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5BDE31DF65674002AEFCA /* LoginVC.swift */; };
 		3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */; };
-		3FDDC0371DFCF0A000745ABD /* CheckUserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDC0361DFCF0A000745ABD /* CheckUserLogin.swift */; };
 		E4923FC11DFE29150063A98B /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923FC01DFE29150063A98B /* UserDefaultKeys.swift */; };
 		E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
@@ -81,7 +80,6 @@
 		3F95DF9F1DF634270051B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC5BDE31DF65674002AEFCA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
-		3FDDC0361DFCF0A000745ABD /* CheckUserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUserLogin.swift; sourceTree = "<group>"; };
 		E4923FC01DFE29150063A98B /* UserDefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,7 +264,6 @@
 				3FC5BDE31DF65674002AEFCA /* LoginVC.swift */,
 				E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */,
 				280F35C21DFBD27E00DF05A4 /* HomeVC.swift */,
-				3FDDC0361DFCF0A000745ABD /* CheckUserLogin.swift */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -367,7 +364,6 @@
 				3F6F701C1DFC873B00368547 /* Winery.swift in Sources */,
 				3F6F70141DFC811D00368547 /* WineryMapVC.swift in Sources */,
 				28C6C8481DFE3950006A8DC4 /* NoteDetailTableVC.swift in Sources */,
-				3FDDC0371DFCF0A000745ABD /* CheckUserLogin.swift in Sources */,
 				28C6C8421DFE38ED006A8DC4 /* Note.swift in Sources */,
 				28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */,
 				3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */,
