@@ -349,6 +349,7 @@
 				TargetAttributes = {
 					3F95DF8D1DF634270051B8BE = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = FT5TU5KEM8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -552,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FT5TU5KEM8;
 				INFOPLIST_FILE = winetour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ISTE422Final.winetour;
@@ -565,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FT5TU5KEM8;
 				INFOPLIST_FILE = winetour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ISTE422Final.winetour;

@@ -66,14 +66,14 @@ class LoginVC: UIViewController {
                     
                     //creating a string
                     var msg : String!
-                    var accountID : NSNumber
+                    var accountIDString : String!
 
                     //getting the json response by parts
                     msg = parseJSON["message"] as! String?
                     hadError = parseJSON["error"] as! Bool?
-                    accountID = parseJSON["accountID"] as! NSNumber!
-                    let accountIDString = String(describing: accountID)
-                    
+                    if let accountID = parseJSON["accountID"] as! NSNumber!{
+                       accountIDString = String(describing: accountID)
+                    }
                     //printing the response
                     print(msg)
                     print(hadError ?? true)

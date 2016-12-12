@@ -234,10 +234,10 @@ class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataMod
             
             if (view.annotation?.title)! != "My Location"{
                 let currentAnnotation = view.annotation as! Winery
-                let parkName = currentAnnotation.getLocation()
+                let wineName = currentAnnotation.getLocation()
                 let placemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
                 let mapItem = MKMapItem(placemark: placemark)
-                mapItem.name = "\(parkName)"
+                mapItem.name = currentAnnotation.getWineryName()
                 //You could also choose: MKLaunchOptionsDirectionsModeWalking
                 let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
                 mapItem.openInMaps(launchOptions: launchOptions)
