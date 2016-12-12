@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataModelFinishedDelegate {
+class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataModelFinishedDelegate{
     
     // Dictionary to pull data from SQL Database
     var dataDict: NSDictionary!
@@ -95,6 +95,11 @@ class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataMod
             wineries.append(newWinery)
         }
         
+        
+        for winery: MKAnnotation in wineries{
+            mapView.addAnnotation(winery)
+        }
+        
         //        print("Wines Array")
         //        print("Wine Count : \(wineries.count)")
         //        print("\(wineries)")
@@ -109,6 +114,7 @@ class WineryMapVC: UIViewController, MKMapViewDelegate, ZoomingProtocol, DataMod
             self.throwOkError(title:"Error in database." , message:"Wineries can not be found. Restart app and try again")
         }
     }
+
     
     func throwOkError(title:String , message: String){
         let failedLoginAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

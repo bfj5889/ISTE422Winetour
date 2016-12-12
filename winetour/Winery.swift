@@ -10,6 +10,20 @@ import Foundation
 import MapKit
 
 class Winery: NSObject, MKAnnotation{
+    
+
+    @objc var title: String? {
+        get{
+            return getWineryName()
+        }
+    }
+    
+    @objc var subtitle: String? {
+        get{
+            return getState()
+        }
+    }
+    
     /*******************************************************************************
      Winery Variables
      *******************************************************************************/
