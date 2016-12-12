@@ -43,6 +43,7 @@
 		E4923FC11DFE29150063A98B /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923FC01DFE29150063A98B /* UserDefaultKeys.swift */; };
 		E4923FC91DFE43E50063A98B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923FC81DFE43E50063A98B /* ProfileVC.swift */; };
 		E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */; };
+		E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B0C1DFE4A7B00473FE1 /* logout.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		E4923FC01DFE29150063A98B /* UserDefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		E4923FC81DFE43E50063A98B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		E4EB5B0C1DFE4A7B00473FE1 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		3F25C45C1DF77DF600A291A4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				E4EB5B0C1DFE4A7B00473FE1 /* logout.png */,
 				3F6F701F1DFC973F00368547 /* Winery Icons */,
 				3F25C45D1DF77DFE00A291A4 /* TabBar Icons */,
 			);
@@ -343,6 +346,7 @@
 				3F25C4641DF7846600A291A4 /* profile.png in Resources */,
 				3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */,
 				3F25C4691DF78B2900A291A4 /* barrel.png in Resources */,
+				E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */,
 				3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */,
 				3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */,
 				3F6F70251DFC99FD00368547 /* 104-index-cards.png in Resources */,

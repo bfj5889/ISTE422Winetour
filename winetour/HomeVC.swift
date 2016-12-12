@@ -10,6 +10,20 @@ import UIKit
 
 class HomeVC: UIViewController{
     
+    @IBAction func logoutBtn(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        
+        defaults.setValue("", forKey: defaultKeys.email)
+        defaults.setValue("", forKey: defaultKeys.lastLogin)
+        defaults.setValue("", forKey: defaultKeys.accountID)
+        
+        //return to login screen
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let loginPage = storyBoard.instantiateInitialViewController()
+        self.present(loginPage!, animated:true, completion:nil)
+        defaults.synchronize()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
