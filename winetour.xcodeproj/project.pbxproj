@@ -44,6 +44,8 @@
 		E4923FC91DFE43E50063A98B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923FC81DFE43E50063A98B /* ProfileVC.swift */; };
 		E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */; };
 		E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B0C1DFE4A7B00473FE1 /* logout.png */; };
+		E4EB5B0F1DFE501A00473FE1 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB5B0E1DFE501A00473FE1 /* EditProfileVC.swift */; };
+		E4EB5B131DFE530F00473FE1 /* editProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B121DFE530F00473FE1 /* editProfile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		E4923FC81DFE43E50063A98B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		E4EB5B0C1DFE4A7B00473FE1 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		E4EB5B0E1DFE501A00473FE1 /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		E4EB5B121DFE530F00473FE1 /* editProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editProfile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		3F25C45C1DF77DF600A291A4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				E4EB5B121DFE530F00473FE1 /* editProfile.png */,
 				E4EB5B0C1DFE4A7B00473FE1 /* logout.png */,
 				3F6F701F1DFC973F00368547 /* Winery Icons */,
 				3F25C45D1DF77DFE00A291A4 /* TabBar Icons */,
@@ -278,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				E4923FC81DFE43E50063A98B /* ProfileVC.swift */,
+				E4EB5B0E1DFE501A00473FE1 /* EditProfileVC.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				3F6F702D1DFCC7E300368547 /* backArrow.png in Resources */,
 				3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */,
 				3F25C4641DF7846600A291A4 /* profile.png in Resources */,
+				E4EB5B131DFE530F00473FE1 /* editProfile.png in Resources */,
 				3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */,
 				3F25C4691DF78B2900A291A4 /* barrel.png in Resources */,
 				E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */,
@@ -385,6 +392,7 @@
 				3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */,
 				28C6C8461DFE3940006A8DC4 /* NoteTableVC.swift in Sources */,
 				3F6F701E1DFC874700368547 /* Wineries.swift in Sources */,
+				E4EB5B0F1DFE501A00473FE1 /* EditProfileVC.swift in Sources */,
 				3F6F70161DFC813100368547 /* WineryTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

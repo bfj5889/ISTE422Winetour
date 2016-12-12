@@ -326,7 +326,7 @@
         <!--Profile-->
         <scene sceneID="3RW-0e-H5P">
             <objects>
-                <viewController restorationIdentifier="profile" storyboardIdentifier="profile" id="juS-ho-ZUl" customClass="ProfileVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="profileEdit" storyboardIdentifier="profileEdit" id="juS-ho-ZUl" customClass="EditProfileVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLJ-ty-7at"/>
                         <viewControllerLayoutGuide type="bottom" id="a08-MX-njY"/>
@@ -335,7 +335,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2R-tY-5px">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2R-tY-5px">
                                 <rect key="frame" x="0.0" y="28" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -350,13 +350,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38z-EF-Zhh">
-                                <rect key="frame" x="16" y="117" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38z-EF-Zhh">
+                                <rect key="frame" x="16" y="117" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3V-Nx-9pn">
+                                <rect key="frame" x="16" y="203" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jn8-AE-wM0">
+                                <rect key="frame" x="16" y="232" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -364,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awm-BJ-pv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046.25" y="1070.0704225352113"/>
+            <point key="canvasLocation" x="-1037" y="1911"/>
         </scene>
         <!--Wines-->
         <scene sceneID="wwh-aY-BvV">
@@ -468,7 +482,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="YMO-4h-ap0" kind="relationship" relationship="viewControllers" id="zzY-fr-Ja3"/>
-                        <segue destination="juS-ho-ZUl" kind="relationship" relationship="viewControllers" id="L72-ok-2af"/>
+                        <segue destination="ZRi-yr-rUs" kind="relationship" relationship="viewControllers" id="Sbo-g4-ATx"/>
                         <segue destination="zhx-ua-moK" kind="relationship" relationship="viewControllers" id="ntU-cS-gir"/>
                         <segue destination="EVg-Aj-uD6" kind="relationship" relationship="viewControllers" id="ncH-id-0cJ"/>
                         <segue destination="IvS-Pz-RfI" kind="relationship" relationship="viewControllers" id="E9C-3H-4D6"/>
@@ -669,12 +683,69 @@
             </objects>
             <point key="canvasLocation" x="-1794.375" y="799.64788732394368"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="SJU-aD-fZV">
+            <objects>
+                <viewController restorationIdentifier="Profile" storyboardIdentifier="Profile" id="ZRi-yr-rUs" customClass="ProfileVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="olR-65-jij"/>
+                        <viewControllerLayoutGuide type="bottom" id="9XT-PB-zwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YwN-hQ-ID7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deg-b4-jXf">
+                                <rect key="frame" x="0.0" y="28" width="320" height="58"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="keb-Pn-RHT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abx-TF-aef">
+                                <rect key="frame" x="0.0" y="468" width="320" height="51"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="z5W-E1-xbO"/>
+                                </constraints>
+                                <state key="normal" title="Edit Profile" image="editProfile.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXj-nV-beo">
+                                <rect key="frame" x="16" y="144" width="288" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="deg-b4-jXf" firstAttribute="trailing" secondItem="abx-TF-aef" secondAttribute="trailing" id="7xQ-bN-qdz"/>
+                            <constraint firstAttribute="trailing" secondItem="deg-b4-jXf" secondAttribute="trailing" id="Sxo-cc-sYy"/>
+                            <constraint firstItem="deg-b4-jXf" firstAttribute="top" secondItem="olR-65-jij" secondAttribute="bottom" constant="8" symbolic="YES" id="aYQ-yY-gAr"/>
+                            <constraint firstItem="deg-b4-jXf" firstAttribute="leading" secondItem="YwN-hQ-ID7" secondAttribute="leading" id="hgc-hh-QHz"/>
+                            <constraint firstItem="deg-b4-jXf" firstAttribute="leading" secondItem="abx-TF-aef" secondAttribute="leading" id="mx6-SN-Ftp"/>
+                            <constraint firstItem="abx-TF-aef" firstAttribute="bottom" secondItem="9XT-PB-zwg" secondAttribute="top" id="vc8-no-Q4i"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="wIl-t7-PVt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sjr-p7-VPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1038.75" y="1067.9577464788733"/>
+        </scene>
     </scenes>
     <resources>
         <image name="103-map.png" width="26" height="21"/>
         <image name="104-index-cards.png" width="26" height="17"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="barrel.png" width="19" height="18"/>
+        <image name="editProfile.png" width="50" height="49"/>
         <image name="logout.png" width="50" height="49"/>
         <image name="profile.png" width="19" height="18"/>
         <image name="second" width="30" height="30"/>
