@@ -9,7 +9,7 @@
 import UIKit
 //import ToolKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController , UITextFieldDelegate{
     
     /** Constant Variables **/
     let LOGIN_URL = "http://kelvin.ist.rit.edu/~winetour/winetour2/api/account/login.php"
@@ -152,9 +152,16 @@ class LoginVC: UIViewController {
         self.present(homepage, animated:true, completion:nil)
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.emailTxtFld.resignFirstResponder()
+        self.pwdTxtFld.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emailTxtFld.delegate = self
+        pwdTxtFld.delegate = self
         // Do any additional setup after loading the view.
     }
     

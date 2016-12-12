@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
+class CreateAccountVC: UIViewController, DataModelFinishedDelegate , UITextFieldDelegate{
     
     var dataDict: NSDictionary = [:]
     @IBOutlet weak var emailTxtFld: UITextField!
@@ -83,7 +83,8 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emailTxtFld.delegate = self
+        pwdTextFld.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -108,6 +109,11 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         // if account can be made go to home page
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.emailTxtFld.resignFirstResponder()
+        self.pwdTextFld.resignFirstResponder()
+        return true
+    }
     
     /*
      // MARK: - Navigation

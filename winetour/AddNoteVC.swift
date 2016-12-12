@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNoteVC: UIViewController {
+class AddNoteVC: UIViewController, UITextFieldDelegate {
 
     let ADD_NOTE_URL = "http://kelvin.ist.rit.edu/~winetour/winetour2/api/note/createNote.php"
     
@@ -120,10 +120,19 @@ class AddNoteVC: UIViewController {
         self.present(addNote, animated:true, completion:nil)
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.noteTitle.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.noteDescription.resignFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        noteTitle.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -132,6 +141,7 @@ class AddNoteVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
 
     /*
     // MARK: - Navigation
