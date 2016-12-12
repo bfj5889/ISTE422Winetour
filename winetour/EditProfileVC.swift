@@ -17,6 +17,9 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func cancelEditBtn(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let wineryWall = storyBoard.instantiateViewController(withIdentifier: "Profile")
+        self.present(wineryWall, animated:true, completion:nil)
     }
     
     override func viewDidLoad() {

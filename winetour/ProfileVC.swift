@@ -16,6 +16,11 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
     
     @IBOutlet weak var userNameLbl: UILabel!
     
+    @IBAction func editProfileBtn(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let wineryWall = storyBoard.instantiateViewController(withIdentifier: "profileEdit")
+        self.present(wineryWall, animated:true, completion:nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
