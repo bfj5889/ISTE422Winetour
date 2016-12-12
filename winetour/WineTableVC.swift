@@ -64,8 +64,8 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         
         // Loop through and create all the wine objects
         for wine in tempArray{
-            print("Wine in Temp")
-            print("\(wine)")
+//            print("Wine in Temp")
+//            print("\(wine)")
             
             let wineID         = wine["wineID"]! as! String
             let wineName       = wine["wineName"]! as! String
@@ -81,19 +81,16 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
             let wineYear       = wine["wineYear"]! as! String
             let wineryID       = wine["wineryID"]! as! String
             
-            //let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, wineDescription: desc, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType)
-            
             let w = Wine(wineID: wineID, wineryID: wineryID, wineName: wineName, brand: brand, wineYear: wineYear, varietal: varietal, dryness: dryness, residualSugar: residualSugar, percentAlcohol: percentAlcohol, image: image, region: region, wineType: wineType, wineDesc: desc)
             
             wines.append(w)
             
-            //print("\(name)  \(brand)")
         }
-        print("Wines Array")
-        print("Wine Count : \(wines.count)")
-        print("\(wines)")
-        print("Get First Wine")
-        print("\(wines[0])")
+//        print("Wines Array")
+//        print("Wine Count : \(wines.count)")
+//        print("\(wines)")
+//        print("Get First Wine")
+//        print("\(wines[0])")
         
         
         //print( ( ((self.dataDict["Wines"]!) as! NSArray) as Array!))
@@ -131,7 +128,7 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("Wine Count in number of row in section : \(wines.count)")
+        //print("Wine Count in number of row in section : \(wines.count)")
         return wines.count
     }
 
@@ -177,50 +174,5 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
             return
         })
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
