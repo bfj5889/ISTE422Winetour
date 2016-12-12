@@ -13,6 +13,9 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
     // Dictionary to pull data from SQL Database
     var dataDict: NSDictionary!
     
+    @IBOutlet weak var userNameLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

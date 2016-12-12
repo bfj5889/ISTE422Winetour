@@ -10,6 +10,15 @@ import UIKit
 
 class EditProfileVC: UIViewController {
 
+    @IBOutlet weak var userFNameTxtFld: UITextField!
+    @IBOutlet weak var userLNameTxtFld: UITextField!
+    
+    @IBAction func updateProfileBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func cancelEditBtn(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

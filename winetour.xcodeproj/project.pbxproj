@@ -46,6 +46,11 @@
 		E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B0C1DFE4A7B00473FE1 /* logout.png */; };
 		E4EB5B0F1DFE501A00473FE1 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB5B0E1DFE501A00473FE1 /* EditProfileVC.swift */; };
 		E4EB5B131DFE530F00473FE1 /* editProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B121DFE530F00473FE1 /* editProfile.png */; };
+		E4EB5B151DFE568600473FE1 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B141DFE568600473FE1 /* 01-refresh.png */; };
+		E4EB5B1A1DFE585F00473FE1 /* addNote.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B161DFE585F00473FE1 /* addNote.png */; };
+		E4EB5B1B1DFE585F00473FE1 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B171DFE585F00473FE1 /* cancel.png */; };
+		E4EB5B1C1DFE585F00473FE1 /* editNote.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B181DFE585F00473FE1 /* editNote.png */; };
+		E4EB5B1D1DFE585F00473FE1 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B191DFE585F00473FE1 /* note.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,11 @@
 		E4EB5B0C1DFE4A7B00473FE1 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		E4EB5B0E1DFE501A00473FE1 /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		E4EB5B121DFE530F00473FE1 /* editProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editProfile.png; sourceTree = "<group>"; };
+		E4EB5B141DFE568600473FE1 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
+		E4EB5B161DFE585F00473FE1 /* addNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addNote.png; sourceTree = "<group>"; };
+		E4EB5B171DFE585F00473FE1 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		E4EB5B181DFE585F00473FE1 /* editNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editNote.png; sourceTree = "<group>"; };
+		E4EB5B191DFE585F00473FE1 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +172,11 @@
 		3F25C45C1DF77DF600A291A4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				E4EB5B1E1DFE587600473FE1 /* Note Icons */,
 				E4EB5B121DFE530F00473FE1 /* editProfile.png */,
+				E4EB5B171DFE585F00473FE1 /* cancel.png */,
 				E4EB5B0C1DFE4A7B00473FE1 /* logout.png */,
+				E4EB5B141DFE568600473FE1 /* 01-refresh.png */,
 				3F6F701F1DFC973F00368547 /* Winery Icons */,
 				3F25C45D1DF77DFE00A291A4 /* TabBar Icons */,
 			);
@@ -288,6 +301,16 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		E4EB5B1E1DFE587600473FE1 /* Note Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB5B161DFE585F00473FE1 /* addNote.png */,
+				E4EB5B181DFE585F00473FE1 /* editNote.png */,
+				E4EB5B191DFE585F00473FE1 /* note.png */,
+			);
+			name = "Note Icons";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,14 +370,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EB5B151DFE568600473FE1 /* 01-refresh.png in Resources */,
 				3F6F702D1DFCC7E300368547 /* backArrow.png in Resources */,
 				3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */,
+				E4EB5B1B1DFE585F00473FE1 /* cancel.png in Resources */,
 				3F25C4641DF7846600A291A4 /* profile.png in Resources */,
+				E4EB5B1C1DFE585F00473FE1 /* editNote.png in Resources */,
 				E4EB5B131DFE530F00473FE1 /* editProfile.png in Resources */,
 				3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */,
 				3F25C4691DF78B2900A291A4 /* barrel.png in Resources */,
 				E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */,
 				3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */,
+				E4EB5B1D1DFE585F00473FE1 /* note.png in Resources */,
+				E4EB5B1A1DFE585F00473FE1 /* addNote.png in Resources */,
 				3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */,
 				3F6F70251DFC99FD00368547 /* 104-index-cards.png in Resources */,
 				3F6F70211DFC978B00368547 /* 103-map.png in Resources */,

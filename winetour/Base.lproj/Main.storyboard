@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mLz-xR-8d7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mLz-xR-8d7">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -371,14 +371,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXW-Nc-c4O">
+                                <rect key="frame" x="53" y="519" width="219" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Cancel Changes" image="cancel.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelEditBtn:" destination="juS-ho-ZUl" eventType="touchUpInside" id="GvM-bt-Kmm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-K2-xM1">
+                                <rect key="frame" x="53" y="449" width="219" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Update Profile" image="01-refresh.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateProfileBtn:" destination="juS-ho-ZUl" eventType="touchUpInside" id="kLR-Q2-vnb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="Ovc-Yh-iKk"/>
+                    <connections>
+                        <outlet property="userFNameTxtFld" destination="hIH-WJ-jwV" id="dpS-iD-GK2"/>
+                        <outlet property="userLNameTxtFld" destination="jn8-AE-wM0" id="gEg-Qn-Py6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awm-BJ-pv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1037" y="1911"/>
+            <point key="canvasLocation" x="-1038.75" y="1910.9154929577464"/>
         </scene>
         <!--Wines-->
         <scene sceneID="wwh-aY-BvV">
@@ -734,6 +760,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="wIl-t7-PVt"/>
+                    <connections>
+                        <outlet property="userNameLbl" destination="UXj-nV-beo" id="deU-PX-9GI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjr-p7-VPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -741,10 +770,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="01-refresh.png" width="24" height="26"/>
         <image name="103-map.png" width="26" height="21"/>
         <image name="104-index-cards.png" width="26" height="17"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="barrel.png" width="19" height="18"/>
+        <image name="cancel.png" width="50" height="49"/>
         <image name="editProfile.png" width="50" height="49"/>
         <image name="logout.png" width="50" height="49"/>
         <image name="profile.png" width="19" height="18"/>
