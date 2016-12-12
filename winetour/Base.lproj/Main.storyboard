@@ -470,6 +470,10 @@
                                     <action selector="logoutBtn:" destination="YMO-4h-ap0" eventType="touchUpInside" id="Cwk-pB-hUm"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="basic-wine-guide.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-5V-YSg">
+                                <rect key="frame" x="0.0" y="77" width="320" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -794,6 +798,7 @@
         <image name="104-index-cards.png" width="26" height="17"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="barrel.png" width="19" height="18"/>
+        <image name="basic-wine-guide.jpg" width="1200" height="1600"/>
         <image name="cancel.png" width="50" height="49"/>
         <image name="editProfile.png" width="50" height="49"/>
         <image name="logout.png" width="50" height="49"/>

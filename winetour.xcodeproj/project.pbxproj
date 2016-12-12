@@ -51,6 +51,7 @@
 		E4EB5B1B1DFE585F00473FE1 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B171DFE585F00473FE1 /* cancel.png */; };
 		E4EB5B1C1DFE585F00473FE1 /* editNote.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B181DFE585F00473FE1 /* editNote.png */; };
 		E4EB5B201DFE59D500473FE1 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B1F1DFE59D500473FE1 /* note.png */; };
+		E4EB5B221DFE752000473FE1 /* basic-wine-guide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B211DFE752000473FE1 /* basic-wine-guide.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		E4EB5B171DFE585F00473FE1 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		E4EB5B181DFE585F00473FE1 /* editNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editNote.png; sourceTree = "<group>"; };
 		E4EB5B1F1DFE59D500473FE1 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		E4EB5B211DFE752000473FE1 /* basic-wine-guide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "basic-wine-guide.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		3F25C45C1DF77DF600A291A4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				E4EB5B211DFE752000473FE1 /* basic-wine-guide.jpg */,
 				E4EB5B1E1DFE587600473FE1 /* Note Icons */,
 				E4EB5B121DFE530F00473FE1 /* editProfile.png */,
 				E4EB5B171DFE585F00473FE1 /* cancel.png */,
@@ -388,6 +391,7 @@
 				3F6F70211DFC978B00368547 /* 103-map.png in Resources */,
 				3F95DF991DF634270051B8BE /* Main.storyboard in Resources */,
 				3F25C4651DF7846600A291A4 /* wine.png in Resources */,
+				E4EB5B221DFE752000473FE1 /* basic-wine-guide.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
