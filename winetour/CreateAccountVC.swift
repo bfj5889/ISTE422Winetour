@@ -104,6 +104,11 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate , UITextField
         
         if (hadError == true){
             self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
+        } else {
+            
+            self.throwOkError(title:"Account Created" , message:"Navigate to Sign Page.")
+            //grab the story board
+
         }
         
         // if account can be made go to home page
