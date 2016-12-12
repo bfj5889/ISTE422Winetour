@@ -41,7 +41,12 @@ class NoteTableVC: UITableViewController, DataModelFinishedDelegate {
         // Intiantiate a Data Model object to retrieve all wines passing in no params
         let dm = DataModel()
         dm.delegate = self
-        dm.sendData(urlString: GET_ALL_WINES_URL, postParamterString: "accountID=5")
+        
+        let defaults = UserDefaults.standard
+        let accountID = defaults.string(forKey: defaultKeys.accountID)
+        let postParameterString: String = "accountID=" + accountID!
+        
+        dm.sendData(urlString: GET_ALL_WINES_URL, postParamterString: postParameterString)
         
     } // end of loadWineData
     
@@ -106,23 +111,25 @@ class NoteTableVC: UITableViewController, DataModelFinishedDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return notes.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "note", for: indexPath)
 
         // Configure the cell...
-
+        let note = notes[indexPath.row]
+        cell.textLabel?.text = note.getTitle()
+        cell.detailTextLabel?.text = note.getNoteDescription()
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
