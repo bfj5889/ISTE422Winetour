@@ -17,6 +17,7 @@
 		28C6C8441DFE3915006A8DC4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8431DFE3915006A8DC4 /* Notes.swift */; };
 		28C6C8461DFE3940006A8DC4 /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8451DFE3940006A8DC4 /* NoteTableVC.swift */; };
 		28C6C8481DFE3950006A8DC4 /* NoteDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8471DFE3950006A8DC4 /* NoteDetailTableVC.swift */; };
+		28C6C84E1DFE916C006A8DC4 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C84D1DFE916C006A8DC4 /* AddNoteVC.swift */; };
 		28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED51DF8A646007A77E4 /* Wine.swift */; };
 		28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED61DF8A646007A77E4 /* Wines.swift */; };
 		3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C45E1DF77EB900A291A4 /* 53-house.png */; };
@@ -65,6 +66,7 @@
 		28C6C8431DFE3915006A8DC4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		28C6C8451DFE3940006A8DC4 /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
 		28C6C8471DFE3950006A8DC4 /* NoteDetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailTableVC.swift; sourceTree = "<group>"; };
+		28C6C84D1DFE916C006A8DC4 /* AddNoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
 		28FDBED51DF8A646007A77E4 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		28FDBED61DF8A646007A77E4 /* Wines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wines.swift; sourceTree = "<group>"; };
 		3F25C45E1DF77EB900A291A4 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		28C6C83F1DFE38DD006A8DC4 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				28C6C84D1DFE916C006A8DC4 /* AddNoteVC.swift */,
 				28C6C8451DFE3940006A8DC4 /* NoteTableVC.swift */,
 				28C6C8471DFE3950006A8DC4 /* NoteDetailTableVC.swift */,
 			);
@@ -409,6 +412,7 @@
 				3F6F70271DFC9E2400368547 /* WineryHomeVC.swift in Sources */,
 				28C6C8281DFE1D22006A8DC4 /* WineryTableDetailGroupVC.swift in Sources */,
 				3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */,
+				28C6C84E1DFE916C006A8DC4 /* AddNoteVC.swift in Sources */,
 				28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */,
 				280F35C31DFBD27E00DF05A4 /* HomeVC.swift in Sources */,
 				28C6C8441DFE3915006A8DC4 /* Notes.swift in Sources */,

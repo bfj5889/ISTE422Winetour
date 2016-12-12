@@ -43,7 +43,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.84731539050000004" green="0.84731539050000004" blue="0.84731539050000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xea-bN-q7k" secondAttribute="trailing" id="IOa-iN-E1a"/>
                             <constraint firstItem="xea-bN-q7k" firstAttribute="trailing" secondItem="LBS-QZ-jOn" secondAttribute="trailing" constant="34" id="N6I-Nn-COn"/>
@@ -272,7 +272,7 @@
         <!--Note TableVC-->
         <scene sceneID="pnb-Lb-J7Q">
             <objects>
-                <tableViewController id="75J-Rq-M2N" customClass="NoteTableVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="addNote" storyboardIdentifier="addNote" id="75J-Rq-M2N" customClass="NoteTableVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IKJ-i4-tqG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,11 +316,99 @@
                             <outlet property="delegate" destination="75J-Rq-M2N" id="RQB-QN-cdT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="F2x-Sq-k9P"/>
+                    <navigationItem key="navigationItem" id="1fp-Sw-bPv">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="Winery Wall" id="nHU-J9-Wx5"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fmd-nE-nC7">
+                            <rect key="frame" x="123" y="7" width="75" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="addNote.png">
+                                <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backToHomeButton:" destination="lpV-XX-gVa" eventType="touchUpInside" id="6O9-g3-DPU"/>
+                                <segue destination="3Yc-po-JPL" kind="show" id="RI0-aY-CBN"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odJ-iM-q0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-174" y="1911"/>
+        </scene>
+        <!--Add NoteVC-->
+        <scene sceneID="RuR-pW-aFb">
+            <objects>
+                <viewController id="3Yc-po-JPL" customClass="AddNoteVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4v2-hu-08x"/>
+                        <viewControllerLayoutGuide type="bottom" id="rOV-Hf-Jf5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYg-5X-Evb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-wK-HbY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-aO-4iG">
+                                <rect key="frame" x="40" y="179" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZOQ-eV-N4g">
+                                <rect key="frame" x="40" y="268" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNl-Ag-b3o">
+                                <rect key="frame" x="40" y="150" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub9-wA-Dxl">
+                                <rect key="frame" x="40" y="231" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x86-IQ-nMe">
+                                <rect key="frame" x="40" y="433" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.08235294118" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Add Note" image="addNote.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNote:" destination="3Yc-po-JPL" eventType="touchUpInside" id="s8O-6w-hZu"/>
+                                    <action selector="updateProfileBtn:" destination="juS-ho-ZUl" eventType="touchUpInside" id="VZP-ok-JnL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="noteDescription" destination="ZOQ-eV-N4g" id="BEd-rq-0sk"/>
+                        <outlet property="noteTitle" destination="gEG-aO-4iG" id="zuW-Ob-ZMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYZ-5x-q8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="1910.9154929577464"/>
         </scene>
         <!--Notes-->
         <scene sceneID="UIm-nt-e4x">
@@ -760,9 +848,6 @@
                                 <state key="normal" title="Edit Profile" image="editProfile.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="editProfileBtn:" destination="ZRi-yr-rUs" eventType="touchUpInside" id="IRz-Bn-fj5"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXj-nV-beo">
                                 <rect key="frame" x="16" y="144" width="288" height="53"/>
@@ -797,6 +882,7 @@
         <image name="103-map.png" width="26" height="21"/>
         <image name="104-index-cards.png" width="26" height="17"/>
         <image name="53-house.png" width="22" height="22"/>
+        <image name="addNote.png" width="50" height="49"/>
         <image name="barrel.png" width="19" height="18"/>
         <image name="basic-wine-guide.jpg" width="1200" height="1600"/>
         <image name="cancel.png" width="50" height="49"/>
