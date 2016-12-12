@@ -56,6 +56,9 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
             //print("\(winery)")
             let fName = profileInfo["firstName"]
             let lName = profileInfo["lastName"]
+            print("username")
+            print(fName)
+            print(lName)
             profileDict.setValue(fName as Any, forKey: "fName")
             profileDict.setValue(lName as Any, forKey: "lName")
         }
