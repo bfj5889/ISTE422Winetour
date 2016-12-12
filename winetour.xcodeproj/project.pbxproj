@@ -41,6 +41,7 @@
 		3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5BDE31DF65674002AEFCA /* LoginVC.swift */; };
 		3FDDC0351DFCEFCA00745ABD /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */; };
 		E4923FC11DFE29150063A98B /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923FC01DFE29150063A98B /* UserDefaultKeys.swift */; };
+		E4923FC91DFE43E50063A98B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923FC81DFE43E50063A98B /* ProfileVC.swift */; };
 		E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		3FC5BDE31DF65674002AEFCA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3FDDC0341DFCEFCA00745ABD /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
 		E4923FC01DFE29150063A98B /* UserDefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		E4923FC81DFE43E50063A98B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		E4DF711E1DF68EEB0070787B /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +241,7 @@
 		3FC5BDDF1DF647A6002AEFCA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E4923FC71DFE43D80063A98B /* Profile */,
 				28C6C83F1DFE38DD006A8DC4 /* Note */,
 				3F6F70121DFC80FA00368547 /* Winery */,
 				280F35C11DFBAF5E00DF05A4 /* Wine */,
@@ -266,6 +269,14 @@
 				280F35C21DFBD27E00DF05A4 /* HomeVC.swift */,
 			);
 			name = General;
+			sourceTree = "<group>";
+		};
+		E4923FC71DFE43D80063A98B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E4923FC81DFE43E50063A98B /* ProfileVC.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280F35C51DFCC4EF00DF05A4 /* WineDetailGroupVC.swift in Sources */,
+				E4923FC91DFE43E50063A98B /* ProfileVC.swift in Sources */,
 				3F6F701A1DFC858D00368547 /* ZommingProtocol.swift in Sources */,
 				280F35C01DFBAF5500DF05A4 /* WineTableVC.swift in Sources */,
 				3F6F70271DFC9E2400368547 /* WineryHomeVC.swift in Sources */,

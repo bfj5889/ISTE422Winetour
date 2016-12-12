@@ -48,8 +48,8 @@ class DataModel {
             do {
                 //converting resonse to NSDictionary
                 myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                print("printing json 1")
-                print(myJSON)
+                //print("printing json 1")
+                //print(myJSON as Any)
                 if let parseJSON = myJSON {
                     DispatchQueue.main.async(execute: {
                        self.delegate?.receivedData(dataModelResponse: parseJSON)

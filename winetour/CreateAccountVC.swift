@@ -98,8 +98,8 @@ class CreateAccountVC: UIViewController, DataModelFinishedDelegate {
         print(dataModelResponse)
         
         let hadError = self.dataDict["error"] as! Bool?
-        print("Does the email exist? ")
-        print(hadError)
+        //print("Does the email exist? ")
+        //print(hadError)
         
         if (hadError == true){
             self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
