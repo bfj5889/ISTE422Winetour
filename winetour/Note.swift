@@ -35,7 +35,7 @@ class Note: NSObject{
      > Convenience
      > Description
      *******************************************************************************/
-    init(title: String, description: String, noteDate: String){
+    init(accountID: String, noteID: String, title: String, description: String, noteDate: String){
         super.init()
         // Set All Variables
         self.setTitle(title)
@@ -45,7 +45,7 @@ class Note: NSObject{
     }
     
     convenience override init() {
-        self.init(title: "Unknown", description: "Unknown", noteDate: "Unknown")
+        self.init(accountID: "Unknown", noteID: "unknown", title: "Unknown", description: "Unknown", noteDate: "Unknown")
     }
     
     //custom to String (informal)
@@ -77,6 +77,20 @@ class Note: NSObject{
     }
     func setDate(_ value: String) {
         noteDate = value
+    }
+    
+    func getAccountID() -> String{
+        return accountID
+    }
+    func setAccountID(_ value: String) {
+        accountID = value
+    }
+    
+    func getNoteID() -> String{
+        return noteID
+    }
+    func setNoteID(_ value: String) {
+        noteID = value
     }
     
     /*******************************************************************************

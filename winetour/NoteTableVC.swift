@@ -60,13 +60,13 @@ class NoteTableVC: UITableViewController, DataModelFinishedDelegate {
             print("Wine in Temp")
             print("\(note)")
             
-            //let noteID         = note["noteID"]! as! String
-            //let accountID      = note["accountID"]! as! String
+            let noteID         = note["noteID"]! as! String
+            let accountID      = note["accountID"]! as! String
             let title          = note["title"]! as! String
             let desc           = note["description"]! as! String
             let noteDate       = note["date"]! as! String
 
-            let n = Note(title: title, description: desc, noteDate: noteDate)
+            let n = Note(accountID: accountID, noteID: noteID, title: title, description: desc, noteDate: noteDate)
             
             notes.append(n)
             
