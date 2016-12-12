@@ -29,10 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (lastLogin != "" && email != ""){
                     //send to home
                     let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "homepageTab") as UIViewController
+                    let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "homepage") as! UITabBarController
                     self.window = UIWindow(frame: UIScreen.main.bounds)
                     self.window?.rootViewController = initialViewControlleripad
                     self.window?.makeKeyAndVisible()
+                    
                 } else{
                     //send to login
                 }
