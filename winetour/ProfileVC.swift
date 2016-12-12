@@ -25,6 +25,7 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProfileData()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -57,19 +58,14 @@ class ProfileVC: UIViewController, DataModelFinishedDelegate {
         // Loop through and create all the profile objects
         print("printing temp array")
         print(tempArray)
-        for profileInfo in tempArray{
-            //print("\(winery)")
-            let fName = profileInfo["firstName"]
-            let lName = profileInfo["lastName"]
-            print("username")
-            print(fName)
-            print(lName)
-            profileDict.setValue(fName as Any, forKey: "fName")
-            profileDict.setValue(lName as Any, forKey: "lName")
-        }
-        let name = "\(profileDict["firstname"] as! String) \(profileDict["lastName"] as! String)"
-        userNameLbl.text? = name
         
+        let fname = tempArray[0]["firstName"]! as! String
+        let lname = tempArray[0]["lastName"]! as! String
+
+        let name = "\(fname)  \(lname)"
+        userNameLbl.text? = name
+
+        print("\(name)")
         let hadError = self.dataDict["error"] as! Bool?
         
         if (hadError == true){

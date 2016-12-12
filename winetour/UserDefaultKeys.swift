@@ -10,4 +10,6 @@ struct defaultKeys {
     static let email = ""
     static let lastLogin = ""
     static let accountID = ""
+    static let fName = ""
+    static let lName = ""
 }
