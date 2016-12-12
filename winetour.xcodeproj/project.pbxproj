@@ -13,6 +13,10 @@
 		28C6C8221DFE071E006A8DC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C6C8211DFE071E006A8DC4 /* MapKit.framework */; };
 		28C6C8241DFE0724006A8DC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C6C8231DFE0724006A8DC4 /* CoreLocation.framework */; };
 		28C6C8281DFE1D22006A8DC4 /* WineryTableDetailGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8271DFE1D22006A8DC4 /* WineryTableDetailGroupVC.swift */; };
+		28C6C8421DFE38ED006A8DC4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8411DFE38ED006A8DC4 /* Note.swift */; };
+		28C6C8441DFE3915006A8DC4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8431DFE3915006A8DC4 /* Notes.swift */; };
+		28C6C8461DFE3940006A8DC4 /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8451DFE3940006A8DC4 /* NoteTableVC.swift */; };
+		28C6C8481DFE3950006A8DC4 /* NoteDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6C8471DFE3950006A8DC4 /* NoteDetailTableVC.swift */; };
 		28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED51DF8A646007A77E4 /* Wine.swift */; };
 		28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDBED61DF8A646007A77E4 /* Wines.swift */; };
 		3F25C45F1DF77EB900A291A4 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F25C45E1DF77EB900A291A4 /* 53-house.png */; };
@@ -48,6 +52,10 @@
 		28C6C8211DFE071E006A8DC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		28C6C8231DFE0724006A8DC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		28C6C8271DFE1D22006A8DC4 /* WineryTableDetailGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineryTableDetailGroupVC.swift; sourceTree = "<group>"; };
+		28C6C8411DFE38ED006A8DC4 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		28C6C8431DFE3915006A8DC4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		28C6C8451DFE3940006A8DC4 /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
+		28C6C8471DFE3950006A8DC4 /* NoteDetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailTableVC.swift; sourceTree = "<group>"; };
 		28FDBED51DF8A646007A77E4 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		28FDBED61DF8A646007A77E4 /* Wines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wines.swift; sourceTree = "<group>"; };
 		3F25C45E1DF77EB900A291A4 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
@@ -107,6 +115,42 @@
 				28C6C8211DFE071E006A8DC4 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28C6C83D1DFE38CC006A8DC4 /* Wine */ = {
+			isa = PBXGroup;
+			children = (
+				28FDBED51DF8A646007A77E4 /* Wine.swift */,
+				28FDBED61DF8A646007A77E4 /* Wines.swift */,
+			);
+			name = Wine;
+			sourceTree = "<group>";
+		};
+		28C6C83E1DFE38D4006A8DC4 /* Winery */ = {
+			isa = PBXGroup;
+			children = (
+				3F6F701B1DFC873B00368547 /* Winery.swift */,
+				3F6F701D1DFC874700368547 /* Wineries.swift */,
+			);
+			name = Winery;
+			sourceTree = "<group>";
+		};
+		28C6C83F1DFE38DD006A8DC4 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				28C6C8451DFE3940006A8DC4 /* NoteTableVC.swift */,
+				28C6C8471DFE3950006A8DC4 /* NoteDetailTableVC.swift */,
+			);
+			name = Note;
+			sourceTree = "<group>";
+		};
+		28C6C8401DFE38E2006A8DC4 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				28C6C8411DFE38ED006A8DC4 /* Note.swift */,
+				28C6C8431DFE3915006A8DC4 /* Notes.swift */,
+			);
+			name = Note;
 			sourceTree = "<group>";
 		};
 		3F25C45C1DF77DF600A291A4 /* Media */ = {
@@ -197,6 +241,7 @@
 		3FC5BDDF1DF647A6002AEFCA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28C6C83F1DFE38DD006A8DC4 /* Note */,
 				3F6F70121DFC80FA00368547 /* Winery */,
 				280F35C11DFBAF5E00DF05A4 /* Wine */,
 				3FDDC0381DFCF0AD00745ABD /* General */,
@@ -207,11 +252,10 @@
 		3FC5BDE01DF647B4002AEFCA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				28FDBED51DF8A646007A77E4 /* Wine.swift */,
-				28FDBED61DF8A646007A77E4 /* Wines.swift */,
+				28C6C8401DFE38E2006A8DC4 /* Note */,
+				28C6C83E1DFE38D4006A8DC4 /* Winery */,
+				28C6C83D1DFE38CC006A8DC4 /* Wine */,
 				3F25C46C1DF79AF100A291A4 /* DataModel.swift */,
-				3F6F701B1DFC873B00368547 /* Winery.swift */,
-				3F6F701D1DFC874700368547 /* Wineries.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -315,15 +359,19 @@
 				3FC5BDE41DF65674002AEFCA /* LoginVC.swift in Sources */,
 				28FDBED71DF8A646007A77E4 /* Wine.swift in Sources */,
 				280F35C31DFBD27E00DF05A4 /* HomeVC.swift in Sources */,
+				28C6C8441DFE3915006A8DC4 /* Notes.swift in Sources */,
 				3F95DF921DF634270051B8BE /* AppDelegate.swift in Sources */,
 				E4923FC11DFE29150063A98B /* UserDefaultKeys.swift in Sources */,
 				E4DF711F1DF68EEB0070787B /* CreateAccountVC.swift in Sources */,
 				3F7CBCCA1DFB137E006360EE /* DataModelFinishedDelegate.swift in Sources */,
 				3F6F701C1DFC873B00368547 /* Winery.swift in Sources */,
 				3F6F70141DFC811D00368547 /* WineryMapVC.swift in Sources */,
+				28C6C8481DFE3950006A8DC4 /* NoteDetailTableVC.swift in Sources */,
 				3FDDC0371DFCF0A000745ABD /* CheckUserLogin.swift in Sources */,
+				28C6C8421DFE38ED006A8DC4 /* Note.swift in Sources */,
 				28FDBED81DF8A646007A77E4 /* Wines.swift in Sources */,
 				3F25C46D1DF79AF100A291A4 /* DataModel.swift in Sources */,
+				28C6C8461DFE3940006A8DC4 /* NoteTableVC.swift in Sources */,
 				3F6F701E1DFC874700368547 /* Wineries.swift in Sources */,
 				3F6F70161DFC813100368547 /* WineryTableVC.swift in Sources */,
 			);
