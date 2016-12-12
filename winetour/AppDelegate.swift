@@ -17,41 +17,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var loginInfo: [:] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        /* https://makeapppie.com/2016/02/11/how-to-use-property-lists-plist-in-swift/ */
-//        var plistData: [String: AnyObject] = [:]
-//        let plistPath = Bundle.main.path(forResource: "UserInfo", ofType: "plist")!
         
-        if let path = Bundle.main.path(forResource: "UserInfo", ofType: "plist") {
+        let defaults = UserDefaults.standard
+        
+        if let email = defaults.string(forKey: defaultKeys.email) {
+            print("email " + email) // Some String Value
+            if let lastLogin = defaults.string(forKey: defaultKeys.lastLogin) {
+                print("lastlogin " + lastLogin) // Another String Value
             
-            //if the contents of the plist can be put into a dictionary enter the loop
-            if let tempDict = NSDictionary(contentsOfFile: path){
-                //make an Array that holds all the attributes for the specfic park
-                let tempArray = (tempDict.value(forKey: "Login") as! NSArray) as Array
-                loginDetails = tempArray
+            
+                if (lastLogin != "" && email != ""){
+                    //send to home
+                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "homepageTab") as UIViewController
+                    self.window = UIWindow(frame: UIScreen.main.bounds)
+                    self.window?.rootViewController = initialViewControlleripad
+                    self.window?.makeKeyAndVisible()
+                } else{
+                    //send to login
+                }
             }
         }
         
-        var lastLogin: String
-        var email: String
-        for loginDictionary in loginDetails! {
-            lastLogin = loginDictionary["lastLogin"] as! String
-            email = loginDictionary["email"] as! String
-            
-            
-            //check to see if user is logged in
-            //if not send to login page, otherwise sned to home page
-            if (lastLogin != "" && email != ""){
-                //send to home
-                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "homepageTab") as UIViewController
-                self.window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.rootViewController = initialViewControlleripad
-                self.window?.makeKeyAndVisible()
-            } else{
-                //send to login
-            }
-        }
+        
+
         
         return true
     }
