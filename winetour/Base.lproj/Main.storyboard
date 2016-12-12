@@ -310,7 +310,7 @@
         <scene sceneID="UIm-nt-e4x">
             <objects>
                 <navigationController id="IvS-Pz-RfI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" image="second" id="FUo-MV-GAk"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="note.png" id="FUo-MV-GAk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vAN-S1-cn8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -323,10 +323,10 @@
             </objects>
             <point key="canvasLocation" x="-174" y="1069"/>
         </scene>
-        <!--Profile-->
+        <!--Edit Profile-->
         <scene sceneID="3RW-0e-H5P">
             <objects>
-                <viewController restorationIdentifier="profileEdit" storyboardIdentifier="profileEdit" id="juS-ho-ZUl" customClass="EditProfileVC" sceneMemberID="viewController">
+                <viewController restorationIdentifier="profileEdit" storyboardIdentifier="profileEdit" title="Edit Profile" id="juS-ho-ZUl" customClass="EditProfileVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLJ-ty-7at"/>
                         <viewControllerLayoutGuide type="bottom" id="a08-MX-njY"/>
@@ -712,7 +712,7 @@
         <!--Profile-->
         <scene sceneID="SJU-aD-fZV">
             <objects>
-                <viewController restorationIdentifier="Profile" storyboardIdentifier="Profile" id="ZRi-yr-rUs" customClass="ProfileVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Profile" storyboardIdentifier="Profile" title="Profile" id="ZRi-yr-rUs" customClass="ProfileVC" customModule="winetour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="olR-65-jij"/>
                         <viewControllerLayoutGuide type="bottom" id="9XT-PB-zwg"/>
@@ -740,6 +740,9 @@
                                 <state key="normal" title="Edit Profile" image="editProfile.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="juS-ho-ZUl" kind="show" id="0aA-fI-gxa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXj-nV-beo">
                                 <rect key="frame" x="16" y="144" width="288" height="53"/>
@@ -778,8 +781,8 @@
         <image name="cancel.png" width="50" height="49"/>
         <image name="editProfile.png" width="50" height="49"/>
         <image name="logout.png" width="50" height="49"/>
+        <image name="note.png" width="30" height="29"/>
         <image name="profile.png" width="19" height="18"/>
-        <image name="second" width="30" height="30"/>
         <image name="wine.png" width="19" height="18"/>
     </resources>
 </document>

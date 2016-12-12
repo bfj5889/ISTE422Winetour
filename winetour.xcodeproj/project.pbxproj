@@ -50,7 +50,7 @@
 		E4EB5B1A1DFE585F00473FE1 /* addNote.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B161DFE585F00473FE1 /* addNote.png */; };
 		E4EB5B1B1DFE585F00473FE1 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B171DFE585F00473FE1 /* cancel.png */; };
 		E4EB5B1C1DFE585F00473FE1 /* editNote.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B181DFE585F00473FE1 /* editNote.png */; };
-		E4EB5B1D1DFE585F00473FE1 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B191DFE585F00473FE1 /* note.png */; };
+		E4EB5B201DFE59D500473FE1 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EB5B1F1DFE59D500473FE1 /* note.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,7 +99,7 @@
 		E4EB5B161DFE585F00473FE1 /* addNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addNote.png; sourceTree = "<group>"; };
 		E4EB5B171DFE585F00473FE1 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		E4EB5B181DFE585F00473FE1 /* editNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editNote.png; sourceTree = "<group>"; };
-		E4EB5B191DFE585F00473FE1 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		E4EB5B1F1DFE59D500473FE1 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,9 +304,9 @@
 		E4EB5B1E1DFE587600473FE1 /* Note Icons */ = {
 			isa = PBXGroup;
 			children = (
+				E4EB5B1F1DFE59D500473FE1 /* note.png */,
 				E4EB5B161DFE585F00473FE1 /* addNote.png */,
 				E4EB5B181DFE585F00473FE1 /* editNote.png */,
-				E4EB5B191DFE585F00473FE1 /* note.png */,
 			);
 			name = "Note Icons";
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				3F25C4691DF78B2900A291A4 /* barrel.png in Resources */,
 				E4EB5B0D1DFE4A7B00473FE1 /* logout.png in Resources */,
 				3F95DF9E1DF634270051B8BE /* LaunchScreen.storyboard in Resources */,
-				E4EB5B1D1DFE585F00473FE1 /* note.png in Resources */,
+				E4EB5B201DFE59D500473FE1 /* note.png in Resources */,
 				E4EB5B1A1DFE585F00473FE1 /* addNote.png in Resources */,
 				3F95DF9B1DF634270051B8BE /* Assets.xcassets in Resources */,
 				3F6F70251DFC99FD00368547 /* 104-index-cards.png in Resources */,
