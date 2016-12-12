@@ -105,7 +105,7 @@ class WineTableVC: UITableViewController, DataModelFinishedDelegate  {
         //print(hadError)
         
         if (hadError == true){
-            self.throwOkError(title:"Can't Create Account" , message:"Account with that email is already created.")
+            self.throwOkError(title:"Couldn't get all wines" , message:"Please contact Administrator")
         }
     }
     
